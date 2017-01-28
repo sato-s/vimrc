@@ -1,18 +1,14 @@
+""""""""""""""""""""""""""""""
+""" Core setting
+""""""""""""""""""""""""""""""
+colorscheme summerfruit256
 set encoding=utf-8
 set t_Co=256                        " force vim to use 256 colors
 set fileformats=unix,dos,mac
 set modifiable
-
 syntax enable
-
-set expandtab
-
-set autoindent
-
 filetype plugin indent on
 set backspace=indent,eol,start
-
-
 set autoread
 set wildmenu
 set nu
@@ -25,85 +21,59 @@ set nobackup
 set nowb 
 set noswapfile
 set nowrap
-
-
-""""" TAB
+set lbr
+set wrap "Wrap lines
+set tw=500
+set wildignore=*.o,*~,*.pyc
+set so=7
+""" Tab
+set autoindent
 set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
-
-""""""""""""""""""""""""""""""
-" => Status line
-" Always show the status line
-"set laststatus=2
-
-" Format the status line
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
-
-execute pathogen#infect()
-call pathogen#helptags()
-
-
-
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
-
-" ignore compiled files
-set wildignore=*.o,*~,*.pyc
-
-
-map <silent> <C-n> :NERDTreeFocus<CR>
-
+""" Cursorline
 set cursorline
 autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
 autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 
+""""""""""""""""""""""""""""""
+""" Plug-inn
+""""""""""""""""""""""""""""""
+""" pathogen
+execute pathogen#infect()
+call pathogen#helptags()
+""" nerd tree
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = '_'
+map <silent> <C-n> :NERDTreeFocus<CR>
+""" markdown
 let g:vim_markdown_folding_disabled = 1
-
-
-nmap <C-j> :bnext<CR>
-nmap <C-k> :bprevious<CR>
+""" airline
 let g:airline#extensions#tabline#enabled = 1
 
-
-syntax enable
-"set background=light
-colorscheme summerfruit256
+""""""""""""""""""""""""""""""
+""" Shortcuts
+""""""""""""""""""""""""""""""
+nmap <C-j> :bnext<CR>
+nmap <C-k> :bprevious<CR>
 nmap gO o<ESC>k
-
 nmap n nzz
 nmap N Nzz
-
 nmap <C-e> $
-imap <C-e> <ESC>A
 nmap <C-a> 0
-
 omap <C-a> 0
 omap <C-e> $
 omap <C-[> <C-o>
-
 nmap m :cn<CR>
 nmap M :cp<CR>
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = '_'
-
-
 nmap <C-[> <C-o> 
 
+""""""""""""""""""""""""""""""
+""" cscope
+""""""""""""""""""""""""""""""
 if has("cscope")
 
     """"""""""""" Standard cscope/vim boilerplate
@@ -239,4 +209,3 @@ if has("cscope")
     "set ttimeoutlen=100
 
 endif
-
