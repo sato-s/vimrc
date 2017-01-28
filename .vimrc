@@ -53,6 +53,9 @@ map <silent> <C-n> :NERDTreeFocus<CR>
 let g:vim_markdown_folding_disabled = 1
 """ airline
 let g:airline#extensions#tabline#enabled = 1
+""" gitgutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
 
 """"""""""""""""""""""""""""""
 """ Shortcuts
