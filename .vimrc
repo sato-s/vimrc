@@ -62,10 +62,6 @@ nmap <C-k> :bprevious<CR>
 nmap gO o<ESC>k
 nmap n nzz
 nmap N Nzz
-nmap <C-e> $
-nmap <C-a> 0
-omap <C-a> 0
-omap <C-e> $
 omap <C-[> <C-o>
 nmap m :cn<CR>
 nmap M :cp<CR>
