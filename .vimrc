@@ -56,6 +56,8 @@ let g:airline#extensions#tabline#enabled = 1
 """ gitgutter
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+""" tagbar
+nmap <C-m> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""
 """ Shortcuts
