@@ -75,12 +75,12 @@ nmap gO o<ESC>k
 nmap n nzz
 nmap N Nzz
 omap <C-[> <C-o>
-nmap m :cn<CR>
-nmap M :cp<CR>
+nmap ]m :cn<CR>
+nmap [m :cp<CR>
 nmap <C-[> <C-o> 
-noremap tl :set list!<CR>
-noremap tw :set wrap!<CR>
-noremap tn :set nu!<CR>
+noremap ml :set list!<CR>
+noremap mw :set wrap!<CR>
+noremap mn :set nu!<CR>
 
 """"""""""""""""""""""""""""""
 """ cscope
