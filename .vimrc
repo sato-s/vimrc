@@ -26,6 +26,11 @@ set wrap "Wrap lines
 set tw=500
 set wildignore=*.o,*~,*.pyc
 set so=7
+set sidescrolloff=16
+set sidescroll=1
+""" Special characters
+set list
+set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
 """ Tab
 set autoindent
 set expandtab
@@ -36,6 +41,8 @@ set tabstop=2
 set cursorline
 autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
 autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
+""" GUI/OS
+set clipboard=unnamed,unnamedplus
 
 """"""""""""""""""""""""""""""
 """ Plug-inn
@@ -71,6 +78,9 @@ omap <C-[> <C-o>
 nmap m :cn<CR>
 nmap M :cp<CR>
 nmap <C-[> <C-o> 
+noremap tl :set list!<CR>
+noremap tw :set wrap!<CR>
+noremap tn :set nu!<CR>
 
 """"""""""""""""""""""""""""""
 """ cscope
