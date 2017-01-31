@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""
 """ Core setting
 """"""""""""""""""""""""""""""
-colorscheme summerfruit256
 set encoding=utf-8
 set t_Co=256                        " force vim to use 256 colors
 set fileformats=unix,dos,mac
@@ -28,6 +27,10 @@ set wildignore=*.o,*~,*.pyc
 set so=7
 set sidescrolloff=16
 set sidescroll=1
+""" ColorScheme
+"colorscheme summerfruit256
+set background=dark
+colorscheme hybrid
 """ Special characters
 set list
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
