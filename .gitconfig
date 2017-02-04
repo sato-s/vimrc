@@ -1,0 +1,16 @@
+[core]
+	editor = vim
+[alias]
+	st = status
+	llog = log --graph --decorate --color --stat
+	slog = log --oneline --color
+	ch = checkout
+	d = diff
+	dc = diff --cached
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
