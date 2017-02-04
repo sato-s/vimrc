@@ -84,6 +84,8 @@ nmap <C-[> <C-o>
 noremap ml :set list!<CR>
 noremap mw :set wrap!<CR>
 noremap mn :set nu!<CR>
+noremap mp :set paste!<CR>
+noremap ms :sh<CR>
 """ Character code
 noremap mcs :e ++enc=shift_jis<CR>
 noremap mcu :e ++enc=utf-8<CR>
