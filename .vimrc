@@ -84,6 +84,10 @@ nmap <C-[> <C-o>
 noremap ml :set list!<CR>
 noremap mw :set wrap!<CR>
 noremap mn :set nu!<CR>
+""" Character code
+noremap mcs :e ++enc=shift_jis<CR>
+noremap mcu :e ++enc=utf-8<CR>
+noremap mce :e ++enc=enc-jp<CR>
 
 """"""""""""""""""""""""""""""
 """ cscope
