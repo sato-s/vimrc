@@ -95,10 +95,10 @@ noremap mn :set nu!<CR>
 noremap mp :set paste!<CR>
 noremap mt :set expandtab!<CR>
 noremap ms :sh<CR>
-""" Character code
-noremap mcs :e ++enc=shift_jis<CR>
-noremap mcu :e ++enc=utf-8<CR>
-noremap mce :e ++enc=enc-jp<CR>
+""" Encoding
+noremap mes :e ++enc=shift_jis<CR>
+noremap meu :e ++enc=utf-8<CR>
+noremap mee :e ++enc=enc-jp<CR>
 """ Comment out
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
 autocmd FileType sh,ruby,python   let b:comment_leader = '# '
