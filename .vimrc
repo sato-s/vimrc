@@ -94,7 +94,8 @@ noremap mw :set wrap!<CR>
 noremap mn :set nu!<CR>
 noremap mp :set paste!<CR>
 noremap mt :set expandtab!<CR>
-noremap ms :sh<CR>
+noremap ms :set spell!<CR>
+noremap mx :sh<CR>
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
 noremap meu :e ++enc=utf-8<CR>
