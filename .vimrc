@@ -89,6 +89,7 @@ omap <C-[> <C-o>
 nmap ]m :cn<CR>
 nmap [m :cp<CR>
 nmap <C-[> <C-o> 
+noremap mh :noh<CR>
 noremap ml :set list!<CR>
 noremap mw :set wrap!<CR>
 noremap mn :set nu!<CR>
