@@ -71,7 +71,7 @@ noremap ngp <Plug>GitGutterPrevHunk
 noremap mgt :GitGutterSignsToggle<CR>
 """ tagbar
 nmap <C-m> :TagbarToggle<CR>
-""" momolist
+""" memolist
 let g:memolist_path = "~/workspace/memo"
 nnoremap mmn :MemoNew<CR>
 nnoremap mml :MemoList<CR>
