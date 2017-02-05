@@ -66,8 +66,12 @@ let g:airline#extensions#tabline#enabled = 1
 """ gitgutter
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+noremap mgn <Plug>GitGutterNextHunk
+noremap ngp <Plug>GitGutterPrevHunk
+noremap mgt :GitGutterSignsToggle<CR>
 """ tagbar
 nmap <C-m> :TagbarToggle<CR>
+""" momolist
 let g:memolist_path = "~/workspace/memo"
 nnoremap mmn :MemoNew<CR>
 nnoremap mml :MemoList<CR>
