@@ -68,6 +68,10 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 """ tagbar
 nmap <C-m> :TagbarToggle<CR>
+let g:memolist_path = "~/workspace/memo"
+nnoremap mmn :MemoNew<CR>
+nnoremap mml :MemoList<CR>
+nnoremap mmg :MemoGrep<CR>
 
 """"""""""""""""""""""""""""""
 """ Shortcuts
