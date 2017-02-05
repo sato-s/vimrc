@@ -12,10 +12,6 @@ set autoread
 set wildmenu
 set nu
 set ruler
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch 
 set nobackup 
 set nowb 
 set noswapfile
@@ -34,6 +30,11 @@ colorscheme hybrid
 """ Special characters
 set list
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
+""" Search 
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch 
 """ Tab
 set autoindent
 set expandtab
