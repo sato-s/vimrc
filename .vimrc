@@ -65,8 +65,6 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 """ nerd tree
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = '_'
 map <silent> <C-n> :NERDTreeFocus<CR>
 """ markdown
 let g:vim_markdown_folding_disabled = 1
