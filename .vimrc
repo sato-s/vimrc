@@ -89,13 +89,13 @@ omap <C-[> <C-o>
 nmap ]m :cn<CR>
 nmap [m :cp<CR>
 nmap <C-[> <C-o> 
-noremap mh :noh<CR>
-noremap ml :set list!<CR>
-noremap mw :set wrap!<CR>
-noremap mn :set nu!<CR>
-noremap mp :set paste!<CR>
-noremap mt :set expandtab!<CR>
-noremap ms :set spell!<CR>
+noremap mth :noh<CR>
+noremap mtl :set list!<CR>
+noremap mtw :set wrap!<CR>
+noremap mtn :set nu!<CR>
+noremap mtp :set paste!<CR>
+noremap mtt :set expandtab!<CR>
+noremap mts :set spell!<CR>
 noremap mx :sh<CR>
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
@@ -110,6 +110,54 @@ autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
 noremap <silent> mcc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> mcu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+""""""""""""""""""""""""""""""
+""" Cygwin clipboard support
+""""""""""""""""""""""""""""""
+
+function! Putclip(type, ...) range
+  let sel_save = &selection
+  let &selection = "inclusive"
+  let reg_save = @@
+  if a:type == 'n'
+    silent exe a:firstline . "," . a:lastline . "y"
+  elseif a:type == 'c'
+    silent exe a:1 . "," . a:2 . "y"
+  else
+    silent exe "normal! `<" . a:type . "`>y"
+  endif
+  
+  "call system('putclip', @@)  " if you're using an old Cygwin
+  "call system('clip.exe', @@) " if you're using Bash on Windows
+  
+  "As of Cygwin 1.7.13, the /dev/clipboard device was added to provide
+  "access to the native Windows clipboard. It provides the added benefit
+  "of supporting utf-8 characters which putclip currently does not. Based
+  "on a tip from John Beckett, use the following:
+  call writefile(split(@@,"\n"), '/dev/clipboard')
+  
+  let &selection = sel_save
+  let @@ = reg_save
+endfunction
+
+vnoremap <silent> my :call Putclip(visualmode(), 1)<CR>
+nnoremap <silent> my :call Putclip('n', 1)<CR>
+
+function! Getclip()
+  let reg_save = @@
+  "let @@ = system('getclip')
+  "Much like Putclip(), using the /dev/clipboard device to access to the
+  "native Windows clipboard for Cygwin 1.7.13 and above. It provides the
+  "added benefit of supporting utf-8 characters which getclip currently does
+  "not. Based again on a tip from John Beckett, use the following:
+  let @@ = join(readfile('/dev/clipboard'), "\n")
+  setlocal paste
+  exe 'normal p'
+  setlocal nopaste
+  let @@ = reg_save
+endfunction
+
+nnoremap <silent> mp :call Getclip()<CR>
 
 """"""""""""""""""""""""""""""
 """ cscope
