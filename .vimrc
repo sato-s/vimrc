@@ -2,7 +2,7 @@
 """ Core setting
 """"""""""""""""""""""""""""""
 set encoding=utf-8
-set t_Co=256                        " force vim to use 256 colors
+set t_Co=256
 set fileformats=unix,dos,mac
 set modifiable
 syntax enable
@@ -23,13 +23,13 @@ set wildignore=*.o,*~,*.pyc
 set so=7
 set sidescrolloff=16
 set sidescroll=1
-""" ColorScheme
+""" Color Scheme
 set background=dark
 colorscheme hybrid
 """ Special characters
 set list
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
-""" Search 
+""" Search
 set ignorecase
 set smartcase
 set hlsearch
@@ -40,7 +40,7 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
-""" Cursorline
+""" Cursor line
 set cursorline
 autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
 autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
