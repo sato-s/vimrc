@@ -3,7 +3,7 @@
 ```
 cd 
 git clone --recursive https://github.com/sato-s/vimrc.git
-mv vimrc/.vim ./
-mv vimrc/.vimrc ./
-mv vimrc/.tmux.conf ./
+cp -rfp vimrc/.vim ./
+cp -rfp vimrc/.vimrc ./
+cp -rfp vimrc/.tmux.conf ./
 ```
