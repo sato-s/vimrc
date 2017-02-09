@@ -53,9 +53,18 @@ set clipboard=unnamed,unnamedplus
 """ pathogen
 execute pathogen#infect()
 call pathogen#helptags()
+""" CtrlP
+let g:ctrlp_map = 'Nop'
+nnoremap ss :<C-u>CtrlPBuffer<CR>
+nnoremap sa :<C-u>CtrlP<CR>
+nnoremap sr :<C-u>CtrlPMRUFiles<CR>
+nnoremap sd :<C-u>CtrlPDir<CR>
+nnoremap st :<C-u>CtrlPTag<CR>
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 """ nerd tree
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = '_'
 map <silent> <C-n> :NERDTreeFocus<CR>
