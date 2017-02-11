@@ -60,7 +60,7 @@ nnoremap sa :<C-u>CtrlP<CR>
 nnoremap sr :<C-u>CtrlPMRUFiles<CR>
 nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
@@ -102,6 +102,7 @@ noremap mtp :set paste!<CR>
 noremap mtt :set expandtab!<CR>
 noremap mts :set spell!<CR>
 noremap mx :sh<CR>
+noremap mb :bd<CR>
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
 noremap meu :e ++enc=utf-8<CR>
