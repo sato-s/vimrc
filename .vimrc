@@ -91,8 +91,8 @@ nmap gO o<ESC>k
 nmap n nzz
 nmap N Nzz
 omap <C-[> <C-o>
-nmap ]m :cn<CR>
-nmap [m :cp<CR>
+nmap ]v :cn<CR>
+nmap [v :cp<CR>
 nmap <C-[> <C-o> 
 noremap mth :noh<CR>
 noremap mtl :set list!<CR>
