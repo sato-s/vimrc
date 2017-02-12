@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vim-buftabline"]
 	path = .vim/bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
+[submodule ".vim/bundle/vim-indent-guides"]
+	path = .vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git

@@ -81,6 +81,8 @@ let g:memolist_path = "~/workspace/memo"
 nnoremap mmn :MemoNew<CR>
 nnoremap mml :MemoList<CR>
 nnoremap mmg :MemoGrep<CR>
+""" indent-guide
+nmap mti <leader>ig
 
 """"""""""""""""""""""""""""""
 """ Shortcuts
