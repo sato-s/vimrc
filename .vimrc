@@ -62,7 +62,8 @@ nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
+let g:ctrlp_extensions = ['tag', 'line']
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 """ nerd tree
 map <silent> <C-n> :NERDTreeFocus<CR>
