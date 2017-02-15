@@ -23,6 +23,8 @@ set wildignore=*.o,*~,*.pyc
 set so=7
 set sidescrolloff=16
 set sidescroll=1
+set statusline='%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P'
+set laststatus=2
 """ Color Scheme
 set background=dark
 colorscheme hybrid
@@ -62,8 +64,10 @@ nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_extensions = ['tag', 'line']
+let g:ctrlp_extensions = ['tag']
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
+let g:ctrlp_by_filename = 1
+let g:ctrlp_open_new_file = 'r'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 """ Ag
 noremap sf :Ag<space>
@@ -75,7 +79,7 @@ let g:vim_markdown_folding_disabled = 1
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 noremap mgn <Plug>GitGutterNextHunk
-noremap ngp <Plug>GitGutterPrevHunk
+noremap mgp <Plug>GitGutterPrevHunk
 noremap mgt :GitGutterSignsToggle<CR>
 """ tagbar
 nmap <C-m> :TagbarToggle<CR>
