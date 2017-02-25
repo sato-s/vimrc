@@ -72,17 +72,16 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 """ Ag
 noremap sf :Ag<space>
 """ nerd tree
-map <silent> <C-n> :NERDTreeFocus<CR>
+map sn :NERDTreeToggle<CR>
 """ markdown
 let g:vim_markdown_folding_disabled = 1
 """ gitgutter
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
-noremap mgn <Plug>GitGutterNextHunk
-noremap mgp <Plug>GitGutterPrevHunk
 noremap mgt :GitGutterSignsToggle<CR>
+noremap mgh :GitGutterLineHighlightsToggle<CR>
 """ tagbar
-nmap <C-m> :TagbarToggle<CR>
+noremap st :TagbarToggle<CR>
 """ memolist
 let g:memolist_path = "~/workspace/memo"
 nnoremap mmn :MemoNew<CR>
@@ -113,6 +112,7 @@ noremap mts :set spell!<CR>
 noremap mtc :set ignorecase!<CR>
 noremap mx :sh<CR>
 noremap mb :bd<CR>
+noremap s <Nop>
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
 noremap meu :e ++enc=utf-8<CR>
