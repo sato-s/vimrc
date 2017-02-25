@@ -110,6 +110,7 @@ noremap mtn :set nu!<CR>
 noremap mtp :set paste!<CR>
 noremap mtt :set expandtab!<CR>
 noremap mts :set spell!<CR>
+noremap mtc :set ignorecase!<CR>
 noremap mx :sh<CR>
 noremap mb :bd<CR>
 """ Encoding
