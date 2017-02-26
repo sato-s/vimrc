@@ -80,6 +80,7 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 noremap mgt :GitGutterSignsToggle<CR>
 noremap mgh :GitGutterLineHighlightsToggle<CR>
+nnoremap sb :Gblame<CR>
 """ tagbar
 noremap st :TagbarToggle<CR>
 """ memolist
