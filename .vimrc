@@ -62,7 +62,7 @@ nnoremap sa :<C-u>CtrlP<CR>
 nnoremap sr :<C-u>CtrlPMRUFiles<CR>
 nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_extensions = ['tag']
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
