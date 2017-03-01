@@ -11,6 +11,7 @@ set backspace=indent,eol,start
 set autoread
 set wildmenu
 set nu
+set numberwidth=4
 set ruler
 set nobackup 
 set nowb 
@@ -135,6 +136,11 @@ autocmd FileType mail,md,txt,markdown let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
 noremap <silent> mcc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> mcu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+""" Panes
+nnoremap <silent> <Right> :vertical resize +5<cr>
+nnoremap <silent> <Left> :vertical resize -5<cr>
+nnoremap <silent> <Up> :resize +5<cr>
+nnoremap <silent> <Down> :resize -5<cr>
 
 """"""""""""""""""""""""""""""
 """ Cygwin clipboard support
