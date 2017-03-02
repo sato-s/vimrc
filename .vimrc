@@ -49,6 +49,9 @@ autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
 autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 """ GUI/OS
 set clipboard=unnamed,unnamedplus
+""" Folding
+set foldmethod=syntax
+set foldlevel=20 " Always fold manually. don't fold at file opening
 
 """"""""""""""""""""""""""""""
 """ Plug-inn
@@ -75,7 +78,7 @@ noremap sf :Ag<space>
 """ nerd tree
 map sn :NERDTreeToggle<CR>
 """ markdown
-let g:vim_markdown_folding_disabled = 1
+"let g:vim_markdown_folding_disabled = 1
 """ gitgutter
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
