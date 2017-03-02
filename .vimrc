@@ -28,7 +28,7 @@ set statusline='%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P'
 set laststatus=2
 """ Color Scheme
 set background=dark
-colorscheme hybrid
+colorscheme afterglow
 """ Special characters
 set list
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
