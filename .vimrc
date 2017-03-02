@@ -13,8 +13,8 @@ set wildmenu
 set nu
 set numberwidth=4
 set ruler
-set nobackup 
-set nowb 
+set nobackup
+set nowb
 set noswapfile
 set nowrap
 set lbr
@@ -36,7 +36,7 @@ set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch 
+set incsearch
 """ Tab
 set autoindent
 set expandtab
