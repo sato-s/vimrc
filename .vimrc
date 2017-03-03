@@ -146,6 +146,16 @@ nnoremap <silent> <Up> :resize +5<cr>
 nnoremap <silent> <Down> :resize -5<cr>
 
 """"""""""""""""""""""""""""""
+""" gvim
+""""""""""""""""""""""""""""""
+""" Stop entering japanese input when switch mode
+set iminsert=0
+set imsearch=-1
+""" Disable menu bar
+set guioptions-=T
+set guioptions-=m
+
+""""""""""""""""""""""""""""""
 """ Cygwin clipboard support
 """"""""""""""""""""""""""""""
 
