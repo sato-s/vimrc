@@ -105,6 +105,10 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 """"""""""""""""""""""""""""""
 """ Shortcuts
 """"""""""""""""""""""""""""""
+nnoremap <C-c> <esc>
+inoremap <C-c> <esc>
+vnoremap <C-c> <esc>
+onoremap <C-c> <esc>
 nmap <C-j> :bnext<CR>
 nmap <C-k> :bprevious<CR>
 nmap gO o<ESC>k
