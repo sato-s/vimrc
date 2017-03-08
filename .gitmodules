@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/haskell-vim"]
 	path = .vim/bundle/haskell-vim
 	url = https://github.com/neovimhaskell/haskell-vim.git
+[submodule ".vim/bundle/BufOnly.vim"]
+	path = .vim/bundle/BufOnly.vim
+	url = https://github.com/vim-scripts/BufOnly.vim.git
