@@ -76,6 +76,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 noremap sf :Ag<space>
 """ nerd tree
 map sn :NERDTreeToggle<CR>
+let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ markdown
 "let g:vim_markdown_folding_disabled = 1
 """ gitgutter
