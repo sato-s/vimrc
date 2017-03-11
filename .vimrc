@@ -130,6 +130,8 @@ noremap mtc :set ignorecase!<CR>
 noremap mx :sh<CR>
 noremap mb :bd<CR>
 noremap s <Nop>
+map Y y$
+vnoremap * "zy:let @/ = @z<CR>n
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
 noremap meu :e ++enc=utf-8<CR>
