@@ -129,6 +129,7 @@ noremap mts :set spell!<CR>
 noremap mtc :set ignorecase!<CR>
 noremap mx :sh<CR>
 noremap mb :bd<CR>
+noremap md :cd %:p:h<CR>
 noremap s <Nop>
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
