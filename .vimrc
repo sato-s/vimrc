@@ -30,7 +30,7 @@ set laststatus=2
 set background=dark
 colorscheme afterglow
 """ Special characters
-set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
+set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:␣
 """ Search
 set ignorecase
 set smartcase
