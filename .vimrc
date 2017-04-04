@@ -21,6 +21,8 @@ set lbr
 set wrap
 set tw=500
 set wildignore=*.o,*~,*.pyc
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz,*.class,*.tar
+set wildignore+=*/target/*,*/.git/*,tags,cscope.out
 set so=7
 set sidescrolloff=16
 set sidescroll=1
@@ -71,7 +73,6 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_open_new_file = 'r'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
 """ Ag
 noremap sf :Ag<space>
 """ nerd tree
