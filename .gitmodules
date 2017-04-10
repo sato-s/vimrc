@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/BufOnly.vim"]
 	path = .vim/bundle/BufOnly.vim
 	url = https://github.com/vim-scripts/BufOnly.vim.git
+[submodule ".vim/bundle/rename.vim"]
+	path = .vim/bundle/rename.vim
+	url = https://github.com/danro/rename.vim.git
