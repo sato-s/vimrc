@@ -93,6 +93,12 @@ let g:memolist_path = "~/workspace/memo"
 nnoremap mmn :MemoNew<CR>
 nnoremap mml :MemoList<CR>
 nnoremap mmg :MemoGrep<CR>
+""" vimwiki
+let g:vimwiki_list = [{'path': '~/workspace/memo','syntax': 'markdown', 'ext': '.md'}]
+nnoremap mww \ww
+nnoremap mwt \wt
+nnoremap mws \ws
+nnoremap mwr \wr
 """ indent-guide
 nmap mti <leader>ig
 """ haskell-vim
