@@ -95,10 +95,10 @@ nnoremap mml :MemoList<CR>
 nnoremap mmg :MemoGrep<CR>
 """ vimwiki
 let g:vimwiki_list = [{'path': '~/workspace/memo','syntax': 'markdown', 'ext': '.md'}]
-nnoremap mww \ww
-nnoremap mwt \wt
-nnoremap mws \ws
-nnoremap mwr \wr
+nnoremap mww :normal <leader>ww<CR>
+nnoremap mwt :normal <leader>wt<CR>
+nnoremap mws :normal <leader>ws<CR>
+nnoremap mwr :normal <leader>wr<CR>
 """ indent-guide
 nmap mti <leader>ig
 """ haskell-vim
