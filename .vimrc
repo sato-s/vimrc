@@ -26,7 +26,7 @@ set wildignore+=*/target/*,*/.git/*,tags,cscope.out
 set so=7
 set sidescrolloff=16
 set sidescroll=1
-set statusline='%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P'
+set statusline=%F%m%r%h%w\%=%{tagbar#currenttag('[%s]','')}\[Pos=%v,%l]\[Len=%L]
 set laststatus=2
 """ Color Scheme
 set background=dark
