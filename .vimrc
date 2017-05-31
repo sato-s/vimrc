@@ -74,7 +74,7 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_open_new_file = 'r'
 """ Ag
-noremap sf :Ag<space>
+noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 """ nerd tree
 map sn :NERDTreeToggle<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
