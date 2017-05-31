@@ -10,6 +10,7 @@ filetype plugin indent on
 set backspace=indent,eol,start
 set autoread
 set wildmenu
+set wildmode=longest:full,full
 set nu
 set numberwidth=4
 set ruler
