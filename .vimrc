@@ -113,10 +113,19 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 """"""""""""""""""""""""""""""
 """ Shortcuts
 """"""""""""""""""""""""""""""
+" CTRL-C to ESC
 nnoremap <C-c> <esc>
 inoremap <C-c> <esc>
 vnoremap <C-c> <esc>
 onoremap <C-c> <esc>
+" Emacs like shortcut on command line
+cnoremap <C-A>    <Home>
+cnoremap <C-E>    <End>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
+cnoremap <C-F> <Right>
+cnoremap <C-B> <Left>
+
 nmap <C-j> :bnext<CR>
 nmap <C-k> :bprevious<CR>
 nmap gO o<ESC>k
