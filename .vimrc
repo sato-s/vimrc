@@ -168,7 +168,8 @@ nnoremap <silent> <Right> :vertical resize +5<cr>
 nnoremap <silent> <Left> :vertical resize -5<cr>
 nnoremap <silent> <Up> :resize +5<cr>
 nnoremap <silent> <Down> :resize -5<cr>
-noremap <Tab> <C-w><C-w>
+nmap <space> <C-w>
+noremap <space><space> <C-w><C-w>
 """ BufOnly
 noremap mB :BufOnly<CR>
 
