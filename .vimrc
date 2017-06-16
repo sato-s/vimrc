@@ -76,7 +76,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<F5>'],
-  \ 'PrtDeleteEnt()':       ['<C-b>'],
+  \ 'PrtDeleteEnt()':       ['<C-l>'],
   \ }
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
