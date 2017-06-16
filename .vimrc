@@ -74,6 +74,10 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtClearCache()':      ['<F5>'],
+  \ 'PrtDeleteEnt()':       ['<C-b>'],
+  \ }
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 """ nerd tree
