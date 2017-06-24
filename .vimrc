@@ -124,8 +124,8 @@ inoremap <C-c> <esc>
 vnoremap <C-c> <esc>
 onoremap <C-c> <esc>
 " Emacs like shortcut on command line
-cnoremap <C-A>    <Home>
-cnoremap <C-E>    <End>
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 cnoremap <C-F> <Right>
