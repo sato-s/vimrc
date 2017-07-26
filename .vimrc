@@ -114,6 +114,14 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+""" jedi
+let g:jedi#goto_command = "spg"
+let g:jedi#goto_assignments_command = "spa"
+let g:jedi#goto_definitions_command = "spd"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "spu"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "spr"
 
 """"""""""""""""""""""""""""""
 """ Shortcuts
