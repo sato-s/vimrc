@@ -31,7 +31,7 @@ set statusline=%F%m%r%h%w\%=%{tagbar#currenttag('[%s]','')}\[Pos=%v,%l]\[Len=%L]
 set laststatus=2
 """ Color Scheme
 set background=dark
-colorscheme hybrid
+colorscheme summerfruit256
 """ Special characters
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:␣
 """ Search
@@ -86,6 +86,9 @@ let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disa
 """ markdown
 "let g:vim_markdown_folding_disabled = 1
 """ gitgutter
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn ctermbg=Black
+highlight SignColumn guibg=Black
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 noremap mgt :GitGutterSignsToggle<CR>
