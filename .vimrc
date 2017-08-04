@@ -33,7 +33,7 @@ set laststatus=2
 set background=dark
 colorscheme summerfruit256
 """ Special characters
-set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:␣
+set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:·
 """ Search
 set ignorecase
 set smartcase
@@ -125,6 +125,23 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "spu"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "spr"
+
+""""""""""""""""""""""""""""""
+""" Platform Dependent
+""""""""""""""""""""""""""""""
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    """ GUI/OS
+    set clipboard=unnamed,unnamedplus
+    set guifont=Consolas:h11:cANSI
+    noremap mtp :set paste!<CR>
+  endif
+endif
 
 """"""""""""""""""""""""""""""
 """ Shortcuts
