@@ -29,6 +29,7 @@ set sidescrolloff=16
 set sidescroll=1
 set statusline=%F%m%r%h%w\%=%{tagbar#currenttag('[%s]','')}\[Pos=%v,%l]\[Len=%L]
 set laststatus=2
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 150000 | syntax clear | endif
 """ Color Scheme
 set background=dark
 colorscheme summerfruit256
