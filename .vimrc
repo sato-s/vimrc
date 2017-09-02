@@ -32,7 +32,7 @@ set laststatus=2
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 150000 | syntax clear | endif
 """ Color Scheme
 set background=dark
-colorscheme summerfruit256
+colorscheme molokai
 """ Special characters
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:·
 """ Search
@@ -362,3 +362,6 @@ if has("cscope")
   nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
   nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 endif
+
+" don' show ~ on brank lines
+highlight EndOfBuffer ctermfg=bg
