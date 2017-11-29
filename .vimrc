@@ -162,8 +162,8 @@ cnoremap <C-N> <Down>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 
-nmap <C-j> :bnext<CR>
-nmap <C-k> :bprevious<CR>
+nmap <C-j> :bnext<CR><C-l>
+nmap <C-k> :bprevious<CR><C-l>
 nmap gO o<ESC>k
 nmap n nzz
 nmap N Nzz
