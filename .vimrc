@@ -178,7 +178,7 @@ noremap mtn :set nu!<CR>
 noremap mtp :set paste!<CR>
 noremap mtt :set expandtab!<CR>
 noremap mts :set spell!<CR>
-noremap mtc :set ignorecase!<CR>
+noremap mtc :set cursorline!<CR>
 noremap mx :sh<CR>
 noremap mb :bd<CR>
 noremap md :cd %:p:h<CR>
