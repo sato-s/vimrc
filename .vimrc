@@ -58,6 +58,7 @@ set clipboard=unnamed,unnamedplus
 """ Folding
 set foldmethod=syntax
 set foldlevel=20 " Always fold manually. don't fold at file opening
+set mf za
 
 """"""""""""""""""""""""""""""
 """ Plug-inn
@@ -98,6 +99,7 @@ nmap [h <Plug>GitGutterPrevHunk
 noremap mgt :GitGutterSignsToggle<CR>
 noremap mgh :GitGutterLineHighlightsToggle<CR>
 nnoremap sb :Gblame<CR>
+nnoremap sgd :Gdiff<CR>
 """ tagbar
 noremap st :TagbarToggle<CR>
 """ memolist
