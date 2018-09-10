@@ -58,7 +58,7 @@ set clipboard=unnamed,unnamedplus
 """ Folding
 set foldmethod=syntax
 set foldlevel=20 " Always fold manually. don't fold at file opening
-set mf za
+noremap mf za
 
 """"""""""""""""""""""""""""""
 """ Plug-inn
