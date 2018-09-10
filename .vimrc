@@ -370,3 +370,5 @@ endif
 
 " don' show ~ on brank lines
 highlight EndOfBuffer ctermfg=bg
+highlight clear CursorLine
+highlight CursorLine gui=underline cterm=underline
