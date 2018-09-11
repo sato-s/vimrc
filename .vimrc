@@ -59,6 +59,14 @@ set clipboard=unnamed,unnamedplus
 set foldmethod=syntax
 set foldlevel=20 " Always fold manually. don't fold at file opening
 noremap mf za
+""" Special character
+inoremap ^^c ✓
+inoremap ^^s ★
+inoremap ^^m 🌑
+inoremap ^^left ←
+inoremap ^^right →
+inoremap ^^up ↑
+inoremap ^^down ↓
 
 """"""""""""""""""""""""""""""
 """ Plug-inn
