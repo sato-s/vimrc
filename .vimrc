@@ -44,9 +44,6 @@ augroup autogroup1
   autocmd FileType vim              let b:comment_leader = '" '
 augroup END
 " More strong sytax highlightning
-""" Color Scheme
-set background=dark
-colorscheme molokai
 """ Special characters
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:·
 """ Search
@@ -400,7 +397,12 @@ if has("cscope")
   nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 endif
 
-" don' show ~ on brank lines
-highlight EndOfBuffer ctermfg=bg
+
+""" Color Scheme
+set background=dark
+colorscheme gruvbox
+
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
+" don' show ~ on brank lines
+highlight EndOfBuffer ctermfg=black ctermbg=black
