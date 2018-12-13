@@ -405,4 +405,4 @@ colorscheme gruvbox
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
 " don' show ~ on brank lines
-highlight EndOfBuffer ctermfg=black ctermbg=black
+highlight EndOfBuffer ctermfg=235 ctermbg=235
