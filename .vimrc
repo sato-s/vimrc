@@ -401,3 +401,7 @@ endif
 highlight EndOfBuffer ctermfg=bg
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
+
+" to display property with guake
+" https://github.com/neovim/neovim/issues/3455
+set guicursor=
