@@ -30,12 +30,20 @@ set sidescrolloff=16
 set sidescroll=1
 set statusline=%F%m%r%h%w\%=%{tagbar#currenttag('[%s]','')}\[Pos=%v,%l]\[Len=%L]
 set laststatus=2
-autocmd BufWinEnter * if line2byte(line("$") + 1) > 150000 | syntax clear | endif
+augroup autogroup1
+  au!
+  autocmd BufEnter * :syntax sync fromstart
+  autocmd BufWinEnter * if line2byte(line("$") + 1) > 150000 | syntax clear | endif
+  autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
+  autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
+  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+  autocmd FileType conf,fstab       let b:comment_leader = '# '
+  autocmd FileType tex              let b:comment_leader = '% '
+  autocmd FileType mail,md,txt,markdown let b:comment_leader = '> '
+  autocmd FileType vim              let b:comment_leader = '" '
+augroup END
 " More strong sytax highlightning
-autocmd BufEnter * :syntax sync fromstart
-""" Color Scheme
-set background=dark
-colorscheme molokai
 """ Special characters
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮,space:·
 """ Search
@@ -51,8 +59,6 @@ set shiftwidth=2
 set tabstop=2
 """ Cursor line
 set cursorline
-autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
-autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 " Block style cursor
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
@@ -86,6 +92,8 @@ nnoremap sa :<C-u>CtrlP<CR>
 nnoremap sr :<C-u>CtrlPMRUFiles<CR>
 nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
+""" FlyGREP
+nnoremap sg :FlyGrep<CR>
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_extensions = ['tag']
@@ -194,8 +202,8 @@ cnoremap <C-N> <Down>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 
-nmap <C-j> :bnext<CR><C-l>
-nmap <C-k> :bprevious<CR><C-l>
+nmap <C-k> :bnext<CR><C-l>
+nmap <C-j> :bprevious<CR><C-l>
 nmap gO o<ESC>k
 nmap n nzz
 nmap N Nzz
@@ -222,12 +230,6 @@ noremap mes :e ++enc=shift_jis<CR>
 noremap meu :e ++enc=utf-8<CR>
 noremap mee :e ++enc=enc-jp<CR>
 """ Comment out
-autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab       let b:comment_leader = '# '
-autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail,md,txt,markdown let b:comment_leader = '> '
-autocmd FileType vim              let b:comment_leader = '" '
 noremap <silent> mcc :TComment<CR>
 noremap <silent> mcu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 """ Panes
@@ -397,11 +399,15 @@ if has("cscope")
   nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 endif
 
-" don' show ~ on brank lines
-highlight EndOfBuffer ctermfg=bg
+
+""" Color Scheme
+set background=dark
+colorscheme gruvbox
+
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
-
 " to display property with guake
 " https://github.com/neovim/neovim/issues/3455
 set guicursor=
+" don' show ~ on brank lines
+highlight EndOfBuffer ctermfg=235 ctermbg=235

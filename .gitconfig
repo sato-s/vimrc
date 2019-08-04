@@ -1,13 +1,13 @@
 [core]
-	editor = vim
+  editor = vim
 [alias]
-	st = status
-	llog = log --graph --decorate --color --stat
-	slog = log --oneline --color
-	ch = checkout
-	d = diff
-	dc = diff --cached
-	b = branch
+  st = status
+  llog = log --graph --decorate --color --stat
+  slog = log --oneline --color
+  ch = checkout
+  d = diff
+  dc = diff --cached
+  b = branch
 [color]
   diff = auto
   status = auto
