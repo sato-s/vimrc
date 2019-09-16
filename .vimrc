@@ -115,8 +115,8 @@ let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disa
 let g:gitgutter_override_sign_column_highlight = 0
 highlight SignColumn ctermbg=Black
 highlight SignColumn guibg=Black
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 noremap mgt :GitGutterSignsToggle<CR>
 noremap mgh :GitGutterLineHighlightsToggle<CR>
 nnoremap sb :Gblame<CR>
