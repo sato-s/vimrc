@@ -119,6 +119,7 @@ nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 noremap mgt :GitGutterSignsToggle<CR>
 noremap mgh :GitGutterLineHighlightsToggle<CR>
+noremap mgr :GitGutterAll<CR>
 nnoremap sb :Gblame<CR>
 nnoremap sgd :Gdiff<CR>
 """ tagbar
