@@ -1,5 +1,6 @@
 [core]
   editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
   st = status
   llog = log --graph --decorate --color --stat
@@ -15,3 +16,5 @@
   interactive = auto
   ui = true
   pager = true
+[remote "origin"]
+	prune = true
