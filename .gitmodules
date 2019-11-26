@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/FlyGrep.vim"]
 	path = .vim/bundle/FlyGrep.vim
 	url = https://github.com/wsdjeg/FlyGrep.vim.git
+[submodule ".vim/bundle/vim-fish"]
+	path = .vim/bundle/vim-fish
+	url = https://github.com/dag/vim-fish.git
