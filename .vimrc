@@ -122,6 +122,9 @@ noremap mgh :GitGutterLineHighlightsToggle<CR>
 noremap mgr :GitGutterAll<CR>
 nnoremap sb :Gblame<CR>
 nnoremap sgd :Gdiff<CR>
+let g:gitgutter_sign_added = '▶'
+let g:gitgutter_sign_modified = '♻'
+let g:gitgutter_sign_removed = '◀'
 """ tagbar
 noremap st :TagbarToggle<CR>
 """ memolist
