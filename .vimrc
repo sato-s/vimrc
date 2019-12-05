@@ -403,7 +403,16 @@ endif
 
 """ Color Scheme
 set background=dark
-colorscheme gruvbox
+colorscheme afterglow
+
+highlight clear CursorLine
+highlight CursorLine gui=underline cterm=underline
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+" let g:gitgutter_override_sign_column_highlight = 0
+" highlight SignColumn ctermbg=Black
+" highlight SignColumn guibg=Black
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
