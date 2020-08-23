@@ -111,6 +111,7 @@ map sn :NERDTreeToggle<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ markdown
 "let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal_code_blocks = 0
 """ gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
 highlight SignColumn ctermbg=Black
