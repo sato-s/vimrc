@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""
 """ Core setting
 """"""""""""""""""""""""""""""
+set mmp=5000
 set encoding=utf-8
 set t_Co=256
 set fileformats=unix,dos,mac
@@ -97,7 +98,7 @@ nnoremap sg :FlyGrep<CR>
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_extensions = ['tag']
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_prompt_mappings = {
@@ -113,7 +114,7 @@ let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disa
 "let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
 """ gitgutter
-let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_override_sign_column_highlight = 1
 highlight SignColumn ctermbg=Black
 highlight SignColumn guibg=Black
 nmap ]h <Plug>(GitGutterNextHunk)
@@ -406,17 +407,16 @@ endif
 
 
 """ Color Scheme
-set background=dark
-colorscheme afterglow
+set background=light
+colorscheme summerfruit256
+hi Normal ctermbg=NONE
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
-highlight GitGutterAdd ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
-" let g:gitgutter_override_sign_column_highlight = 0
-" highlight SignColumn ctermbg=Black
-" highlight SignColumn guibg=Black
+" highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterAdd    guifg=#009900 ctermfg=15 ctermbg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=15 ctermbg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=15 ctermbg=1
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
@@ -424,4 +424,5 @@ highlight CursorLine gui=underline cterm=underline
 " https://github.com/neovim/neovim/issues/3455
 set guicursor=
 " don' show ~ on brank lines
-highlight EndOfBuffer ctermfg=235 ctermbg=235
+highlight EndOfBuffer ctermfg=255 ctermbg=255
+
