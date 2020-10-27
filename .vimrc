@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""
 """ Core setting
 """"""""""""""""""""""""""""""
+autocmd FileType jb set syntax=ruby
 set mmp=5000
 set encoding=utf-8
 set t_Co=256
@@ -24,7 +25,7 @@ set wrap
 set tw=500
 set wildignore=*.o,*~,*.pyc
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz,*.class,*.tar
-set wildignore+=*/target/*,*/venv/*,,*/.git/*,tags,cscope.out
+set wildignore+=*/target/*,*/venv/*,,*/.git/*,cscope.out
 set wildignore+=*/vendor/*,*/node_modules/*,*/build/*
 set so=7
 set sidescrolloff=16
@@ -71,6 +72,8 @@ set clipboard=unnamed,unnamedplus
 set foldmethod=syntax
 set foldlevel=20 " Always fold manually. don't fold at file opening
 noremap mf za
+noremap msnake :s#\(\<\u\l\+\|\l\+\)\(\u\)#\l\1_\l\2#g<CR>
+
 """ Special character
 inoremap ^^c ✓
 inoremap ^^s ★
@@ -90,7 +93,11 @@ call pathogen#helptags()
 let g:ctrlp_map = 'Nop'
 nnoremap ss :<C-u>CtrlPBuffer<CR>
 nnoremap sa :<C-u>CtrlP<CR>
-nnoremap sr :<C-u>CtrlPMRUFiles<CR>
+nnoremap sl :<C-u>CtrlPMRUFiles<CR>
+nnoremap srm :<C-u>CtrlPModels<CR>
+nnoremap src :<C-u>CtrlPControllers<CR>
+nnoremap srv :<C-u>CtrlPViews<CR>
+nnoremap srs :<C-u>CtrlPSpecs<CR>
 nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
 """ FlyGREP
@@ -409,7 +416,9 @@ endif
 """ Color Scheme
 set background=light
 colorscheme summerfruit256
-hi Normal ctermbg=NONE
+" colorscheme molokai
+" hi Normal ctermfg=7*
+" hi Normal ctermbg=7*
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
