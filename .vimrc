@@ -425,4 +425,4 @@ highlight CursorLine gui=underline cterm=underline
 set guicursor=
 " don' show ~ on brank lines
 highlight EndOfBuffer ctermfg=255 ctermbg=255
-
+"
