@@ -9,3 +9,7 @@ tar zxf peco_linux_amd64.tar.gz
 cp peco_linux_amd64/peco /usr/local/bin
 
 chmod -R 755 /usr/local/bin/
+
+
+# vimplugin for python
+pip3 install pynvim
