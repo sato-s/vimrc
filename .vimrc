@@ -1,4 +1,10 @@
 """"""""""""""""""""""""""""""
+""" Plug-ins
+""""""""""""""""""""""""""""""
+call plug#begin()
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
+call plug#end()
+""""""""""""""""""""""""""""""
 """ Core setting
 """"""""""""""""""""""""""""""
 autocmd FileType jb set syntax=ruby
