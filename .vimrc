@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""""
 call plug#begin()
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
+Plug 'sainnhe/edge'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
@@ -421,7 +422,7 @@ endif
 
 """ Color Scheme
 set background=light
-colorscheme summerfruit256
+colorscheme edge
 " colorscheme molokai
 " hi Normal ctermfg=7*
 " hi Normal ctermbg=7*
@@ -439,4 +440,4 @@ highlight CursorLine gui=underline cterm=underline
 " https://github.com/neovim/neovim/issues/3455
 set guicursor=
 " don' show ~ on brank lines
-highlight EndOfBuffer ctermfg=255 ctermbg=255
+" highlight EndOfBuffer ctermfg=255 ctermbg=255
