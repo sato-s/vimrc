@@ -10,5 +10,4 @@ cp -rfp vimrc/.gemrc ./
 ```
 
 
-
-- https://github.com/so-fancy/diff-so-fancy
+Run :PlugInstall in nvim
