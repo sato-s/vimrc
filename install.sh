@@ -13,3 +13,6 @@ chmod -R 755 /usr/local/bin/
 
 # vimplugin for python
 pip3 install pynvim
+
+# brew
+brew install fd ripgrep
