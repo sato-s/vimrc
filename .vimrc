@@ -4,6 +4,8 @@
 call plug#begin()
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 Plug 'sainnhe/edge'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
@@ -421,8 +423,8 @@ endif
 
 
 """ Color Scheme
-set background=light
-colorscheme edge
+set background=dark
+colorscheme afterglow
 " colorscheme molokai
 " hi Normal ctermfg=7*
 " hi Normal ctermbg=7*
