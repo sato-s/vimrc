@@ -101,7 +101,7 @@ call pathogen#helptags()
 """ CtrlP
 let g:ctrlp_map = 'Nop'
 nnoremap ss :<C-u>CtrlPBuffer<CR>
-nnoremap sa :<C-u>CtrlP<CR>
+nnoremap sa :Files<CR>
 nnoremap sl :<C-u>CtrlPMRUFiles<CR>
 nnoremap srm :<C-u>CtrlPModels<CR>
 nnoremap src :<C-u>CtrlPControllers<CR>
@@ -121,8 +121,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<C-a>'],
   \ 'PrtDeleteEnt()':       ['<C-l>'],
   \ }
-""" Ag
-noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
+""" Rg
+noremap sf :Rg <C-R>=expand("<cword>")<CR><CR>
 """ nerd tree
 map sn :NERDTreeToggle<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
@@ -425,7 +425,6 @@ endif
 """ Color Scheme
 set background=dark
 colorscheme afterglow
-" colorscheme molokai
 " hi Normal ctermfg=7*
 " hi Normal ctermbg=7*
 
