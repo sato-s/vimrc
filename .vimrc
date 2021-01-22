@@ -6,6 +6,8 @@ Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 Plug 'sainnhe/edge'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
@@ -100,9 +102,9 @@ execute pathogen#infect()
 call pathogen#helptags()
 """ CtrlP
 let g:ctrlp_map = 'Nop'
-nnoremap ss :<C-u>CtrlPBuffer<CR>
-nnoremap sa :Files<CR>
-nnoremap sl :<C-u>CtrlPMRUFiles<CR>
+nnoremap ss :Buffers<CR>
+nnoremap sa :GFiles<CR>
+nnoremap sl :History<CR>
 nnoremap srm :<C-u>CtrlPModels<CR>
 nnoremap src :<C-u>CtrlPControllers<CR>
 nnoremap srv :<C-u>CtrlPViews<CR>
