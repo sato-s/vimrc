@@ -12,7 +12,8 @@ call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
 """"""""""""""""""""""""""""""
-autocmd FileType jb set syntax=ruby
+"" filetype
+au BufRead,BufNewFile *.jb setfiletype ruby
 set mmp=5000
 set encoding=utf-8
 set t_Co=256
