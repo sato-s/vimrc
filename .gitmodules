@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule ".vim/bundle/Tagbar"]
 	path = .vim/bundle/Tagbar
 	url = https://github.com/vim-scripts/Tagbar.git
@@ -40,9 +37,6 @@
 [submodule ".vim/bundle/BufOnly.vim"]
 	path = .vim/bundle/BufOnly.vim
 	url = https://github.com/vim-scripts/BufOnly.vim.git
-[submodule ".vim/bundle/rename.vim"]
-	path = .vim/bundle/rename.vim
-	url = https://github.com/danro/rename.vim.git
 [submodule ".vim/bundle/vimwiki"]
 	path = .vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git

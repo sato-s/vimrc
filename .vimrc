@@ -8,6 +8,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'danro/rename.vim'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
