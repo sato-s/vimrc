@@ -10,12 +10,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'danro/rename.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
 """"""""""""""""""""""""""""""
 "" filetype
 au BufRead,BufNewFile *.jb setfiletype ruby
+au FocusGained,BufEnter * :checktime
 set mmp=5000
 set encoding=utf-8
 set t_Co=256
