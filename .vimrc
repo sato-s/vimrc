@@ -11,6 +11,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'danro/rename.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'iurifq/ctrlp-rails.vim'
+Plug 'mechatroner/rainbow_csv'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
