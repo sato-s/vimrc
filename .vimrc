@@ -440,7 +440,6 @@ colorscheme afterglow
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
-" highlight GitGutterAdd    guifg=#009900 ctermfg=2
 highlight GitGutterAdd    guifg=#009900 ctermfg=15 ctermbg=2
 highlight GitGutterChange guifg=#bbbb00 ctermfg=15 ctermbg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=15 ctermbg=1
