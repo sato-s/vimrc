@@ -241,7 +241,7 @@ nmap N Nzz
 omap <C-[> <C-o>
 nmap ]v :cn<CR>
 nmap [v :cp<CR>
-nmap <C-[> <C-o> 
+nmap <C-[> <C-o>
 noremap mth :noh<CR>
 noremap mtl :set list!<CR>
 noremap mtw :set wrap!<CR>
@@ -298,16 +298,16 @@ function! Putclip(type, ...) range
   else
     silent exe "normal! `<" . a:type . "`>y"
   endif
-  
+
   "call system('putclip', @@)  " if you're using an old Cygwin
   "call system('clip.exe', @@) " if you're using Bash on Windows
-  
+
   "As of Cygwin 1.7.13, the /dev/clipboard device was added to provide
   "access to the native Windows clipboard. It provides the added benefit
   "of supporting utf-8 characters which putclip currently does not. Based
   "on a tip from John Beckett, use the following:
   call writefile(split(@@,"\n"), '/dev/clipboard')
-  
+
   let &selection = sel_save
   let @@ = reg_save
 endfunction
@@ -332,7 +332,7 @@ endfunction
 nnoremap <silent> mp :call Getclip()<CR>
 
 """"""""""""""""""""""""""""""
-""" mksession when exit 
+""" mksession when exit
 """"""""""""""""""""""""""""""
 " function! MakeSession()
 "   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
@@ -376,24 +376,23 @@ if has("cscope")
 
   " add any cscope database in current directory
   if filereadable("cscope.out")
-      cs add cscope.out  
-  " else add the database pointed to by environment variable 
+      cs add cscope.out
+  " else add the database pointed to by environment variable
   elseif $CSCOPE_DB != ""
       cs add $CSCOPE_DB
   endif
 
   " show msg when any other cscope db added
-  set cscopeverbose  
+  set cscopeverbose
 
-
-  nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
-  nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
-  nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
-  nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
-  nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-  nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+  nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+  nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
   nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-  nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+  nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
   " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
