@@ -13,6 +13,11 @@ Plug 'kien/ctrlp.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'iurifq/ctrlp-rails.vim'
 Plug 'mechatroner/rainbow_csv'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-bundler'
+Plug 'ap/vim-buftabline'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
@@ -118,6 +123,16 @@ nnoremap srv :<C-u>CtrlPViews<CR>
 nnoremap srs :<C-u>CtrlPSpecs<CR>
 nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
+
+function BrightHighlightOn()
+  hi CursorLine guibg=darkred
+endfunction
+
+function BrightHighlightOff()
+  hi CursorLine guibg=#191919
+endfunction
 """ FlyGREP
 nnoremap sg :FlyGrep<CR>
 let g:ctrlp_working_path_mode = '0'
@@ -134,6 +149,7 @@ let g:ctrlp_prompt_mappings = {
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 """ nerd tree
 map sn :NERDTreeToggle<CR>
+map sc :NERDTreeFind<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ markdown
 "let g:vim_markdown_folding_disabled = 1
