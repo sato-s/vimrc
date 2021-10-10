@@ -18,6 +18,14 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
 Plug 'ap/vim-buftabline'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'ap/vim-css-color'
+Plug 'elixir-editors/vim-elixir'
+Plug 'dag/vim-fish'
+Plug 'fatih/vim-go'
+Plug 'plasticboy/vim-markdown'
+Plug 'MaxMEllon/vim-jsx-pretty'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
