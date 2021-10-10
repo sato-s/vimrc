@@ -13,9 +13,6 @@
 [submodule ".vim/bundle/vim-surround"]
   path = .vim/bundle/vim-surround
   url = git://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/memolist.vim"]
-	path = .vim/bundle/memolist.vim
-	url = https://github.com/glidenote/memolist.vim.git
 [submodule ".vim/bundle/vim-indent-guides"]
 	path = .vim/bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
@@ -58,9 +55,6 @@
 [submodule ".vim/bundle/vim-jsx"]
 	path = .vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule ".vim/bundle/gruvbox"]
-	path = .vim/bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox.git
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -73,6 +67,3 @@
 [submodule ".vim/bundle/vim-abolish"]
 	path = .vim/bundle/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
-[submodule ".vim/bundle/Vundle.vim"]
-	path = .vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
