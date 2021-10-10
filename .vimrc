@@ -136,9 +136,6 @@ inoremap ^^down ↓
 """"""""""""""""""""""""""""""
 """ Plug-inn
 """"""""""""""""""""""""""""""
-""" pathogen
-execute pathogen#infect()
-call pathogen#helptags()
 """ CtrlP
 let g:ctrlp_map = 'Nop'
 nnoremap ss :<C-u>CtrlPBuffer<CR>
