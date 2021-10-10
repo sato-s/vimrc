@@ -175,9 +175,18 @@ noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 map sn :NERDTreeToggle<CR>
 map sc :NERDTreeFind<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
-""" markdown
-"let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_conceal_code_blocks = 0
+""" buffet
+let g:buffet_show_index = 1
+nmap m1 <Plug>BuffetSwitch(1)
+nmap m2 <Plug>BuffetSwitch(2)
+nmap m3 <Plug>BuffetSwitch(3)
+nmap m4 <Plug>BuffetSwitch(4)
+nmap m5 <Plug>BuffetSwitch(5)
+nmap m6 <Plug>BuffetSwitch(6)
+nmap m7 <Plug>BuffetSwitch(7)
+nmap m8 <Plug>BuffetSwitch(8)
+nmap m9 <Plug>BuffetSwitch(9)
+nmap m0 <Plug>BuffetSwitch(10)
 """ gitgutter
 let g:gitgutter_override_sign_column_highlight = 1
 highlight SignColumn ctermbg=Black
@@ -192,13 +201,11 @@ nnoremap sgd :Gdiff<CR>
 let g:gitgutter_sign_added = '▶'
 let g:gitgutter_sign_modified = '⮂'
 let g:gitgutter_sign_removed = '◀'
+""" markdown
+"let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal_code_blocks = 0
 """ tagbar
 noremap st :TagbarToggle<CR>
-""" memolist
-let g:memolist_path = "~/workspace/memo"
-nnoremap mmn :MemoNew<CR>
-nnoremap mml :MemoList<CR>
-nnoremap mmg :MemoGrep<CR>
 """ vimwiki
 let g:vimwiki_list = [{'path': '~/workspace/memo','syntax': 'markdown', 'ext': '.md'}]
 nnoremap mww :normal <leader>ww<CR>
