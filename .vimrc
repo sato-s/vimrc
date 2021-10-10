@@ -2,7 +2,6 @@
 """ Plug-ins
 """"""""""""""""""""""""""""""
 call plug#begin()
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 Plug 'sainnhe/edge'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -29,6 +28,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/Tagbar'
+Plug 'preservim/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rking/ag.vim'
