@@ -13,8 +13,6 @@ Plug 'davidhalter/jedi-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'iurifq/ctrlp-rails.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mechatroner/rainbow_csv'
