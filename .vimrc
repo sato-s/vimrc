@@ -40,6 +40,9 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/Tagbar'
 Plug 'vimwiki/vimwiki'
 Plug 'wsdjeg/FlyGrep.vim'
+""" ColorScheme
+Plug 'danilo-augusto/vim-afterglow'
+Plug 'sickill/vim-monokai'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
