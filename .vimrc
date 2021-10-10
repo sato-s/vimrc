@@ -43,6 +43,7 @@ Plug 'wsdjeg/FlyGrep.vim'
 """ ColorScheme
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'sickill/vim-monokai'
+Plug 'sato-s/summerfruit256.vim'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
