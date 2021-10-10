@@ -44,6 +44,7 @@ Plug 'wsdjeg/FlyGrep.vim'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'sickill/vim-monokai'
 Plug 'sato-s/summerfruit256.vim'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 """"""""""""""""""""""""""""""
 """ Core setting
@@ -473,11 +474,11 @@ endif
 
 
 """ Color Scheme
-set background=dark
-colorscheme afterglow
-" colorscheme molokai
-" hi Normal ctermfg=7*
-" hi Normal ctermbg=7*
+set termguicolors
+" let ayucolor="light"
+let ayucolor="mirage"
+" let ayucolor="dark"
+colorscheme ayu
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
