@@ -157,8 +157,6 @@ endfunction
 function BrightHighlightOff()
   hi CursorLine guibg=#191919
 endfunction
-""" FlyGREP
-nnoremap sg :FlyGrep<CR>
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_extensions = ['tag']
@@ -169,6 +167,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<C-a>'],
   \ 'PrtDeleteEnt()':       ['<C-l>'],
   \ }
+""" FlyGREP
+nnoremap sg :FlyGrep<CR>
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 """ nerd tree
