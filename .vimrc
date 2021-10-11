@@ -38,6 +38,7 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/Tagbar'
 Plug 'vimwiki/vimwiki'
 Plug 'wsdjeg/FlyGrep.vim'
+Plug 'hsanson/vim-openapi'
 """ ColorScheme
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'sickill/vim-monokai'
@@ -83,7 +84,7 @@ set laststatus=2
 augroup autogroup1
   au!
   autocmd BufEnter * :syntax sync fromstart
-  autocmd BufWinEnter * if line2byte(line("$") + 1) > 150000 | syntax clear | endif
+  " autocmd BufWinEnter * if line2byte(line("$") + 1) > 150000 | syntax clear | endif
   autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
   autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
   autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
