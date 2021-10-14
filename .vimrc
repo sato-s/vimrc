@@ -21,6 +21,9 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'preservim/tagbar'
 Plug 'rking/ag.vim'
 Plug 'sainnhe/edge'
@@ -133,8 +136,23 @@ inoremap ^^up ↑
 inoremap ^^down ↓
 
 """"""""""""""""""""""""""""""
-""" Plug-inn
+""" pluginn
 """"""""""""""""""""""""""""""
+""" vim-lsp soloargraph
+if executable('solargraph')
+  " gem install solargraph
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'solargraph',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+    \ 'initialization_options': {"diagnostics": "true"},
+    \ 'whitelist': ['ruby'],
+    \ })
+endif
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ asyncomplete#force_refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 """ CtrlP
 let g:ctrlp_map = 'Nop'
 nnoremap ss :<C-u>CtrlPBuffer<CR>
