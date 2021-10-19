@@ -216,6 +216,11 @@ nnoremap sgd :Gdiff<CR>
 let g:gitgutter_sign_added = '▶'
 let g:gitgutter_sign_modified = '⮂'
 let g:gitgutter_sign_removed = '◀'
+""" buffet
+noremap <C-k> :bn<CR>
+noremap <C-j> :bp<CR>
+noremap mb :Bw<CR>
+noremap mB :Bonly<CR>
 """ markdown
 "let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
@@ -295,8 +300,6 @@ cnoremap <C-N> <Down>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 
-nmap <C-k> :bnext<CR><C-l>
-nmap <C-j> :bprevious<CR><C-l>
 nmap gO o<ESC>k
 nmap n nzz
 nmap N Nzz
