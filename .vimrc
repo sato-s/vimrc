@@ -37,7 +37,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/Tagbar'
 Plug 'vimwiki/vimwiki'
 Plug 'wsdjeg/FlyGrep.vim'
@@ -138,13 +137,12 @@ inoremap ^^down ↓
 """"""""""""""""""""""""""""""
 """ pluginn
 """"""""""""""""""""""""""""""
-""" vim-lsp soloargraph
+""" solargraph
 if executable('solargraph')
   " gem install solargraph
   au User lsp_setup call lsp#register_server({
     \ 'name': 'solargraph',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-    \ 'initialization_options': {"diagnostics": "true"},
     \ 'whitelist': ['ruby'],
     \ })
 endif
@@ -315,7 +313,6 @@ noremap mtt :set expandtab!<CR>
 noremap mts :set spell!<CR>
 noremap mtc :set cursorline!<CR>
 noremap mx :sh<CR>
-noremap mb :bd<CR>
 noremap md :cd %:p:h<CR>
 noremap s <Nop>
 map Y y$
@@ -334,8 +331,6 @@ nnoremap <silent> <Up> :resize +5<cr>
 nnoremap <silent> <Down> :resize -5<cr>
 nmap <space> <C-w>
 noremap <space><space> <C-w><C-w>
-""" BufOnly
-noremap mB :BufOnly<CR>
 
 """"""""""""""""""""""""""""""
 """ gvim
