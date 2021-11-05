@@ -241,7 +241,7 @@ nmap [h <Plug>(GitGutterPrevHunk)
 noremap mgt :GitGutterSignsToggle<CR>
 noremap mgh :GitGutterLineHighlightsToggle<CR>
 noremap mgr :GitGutterAll<CR>
-nnoremap sb :Gblame<CR>
+nnoremap sb :Git blame<CR>
 nnoremap sgd :Gdiff<CR>
 let g:gitgutter_sign_added = '▶'
 let g:gitgutter_sign_modified = '⮂'
