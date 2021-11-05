@@ -76,7 +76,7 @@ set wrap
 set tw=500
 set wildignore=*.o,*~,*.pyc
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz,*.class,*.tar
-set wildignore+=*/target/*,*/venv/*,,*/.git/*,cscope.out
+set wildignore+=*/target/*,*/venv/*,*/.git/*,cscope.out
 set wildignore+=*/vendor/*,*/node_modules/*,*/build/*
 set so=7
 set sidescrolloff=16
