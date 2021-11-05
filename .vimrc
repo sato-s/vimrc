@@ -233,6 +233,7 @@ nmap m8 <Plug>BuffetSwitch(8)
 nmap m9 <Plug>BuffetSwitch(9)
 nmap m0 <Plug>BuffetSwitch(10)
 """ gitgutter
+set updatetime=100
 let g:gitgutter_override_sign_column_highlight = 1
 highlight SignColumn ctermbg=Black
 highlight SignColumn guibg=Black
