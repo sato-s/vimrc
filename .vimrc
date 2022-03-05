@@ -51,6 +51,7 @@ call plug#end()
 """ Core setting
 """"""""""""""""""""""""""""""
 "" filetype
+lang en_US.UTF-8
 au BufRead,BufNewFile *.jb setfiletype ruby
 au FocusGained,BufEnter * :checktime
 set mmp=5000
