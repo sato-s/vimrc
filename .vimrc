@@ -688,3 +688,5 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 " " Resume latest coc list.
 " nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 nnoremap sp <Plug>(coc-fix-current)
+
+nnoremap <leader>e <Plug>(coc-codeaction)
