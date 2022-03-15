@@ -126,7 +126,6 @@ set clipboard=unnamed,unnamedplus
 set foldmethod=syntax
 set foldlevel=20 " Always fold manually. don't fold at file opening
 noremap mf za
-noremap msnake :s#\(\<\u\l\+\|\l\+\)\(\u\)#\l\1_\l\2#g<CR>
 
 """ Special character
 inoremap ^^c ✓
