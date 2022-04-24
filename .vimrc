@@ -2,6 +2,8 @@
 """ Plug-ins
 """"""""""""""""""""""""""""""
 call plug#begin()
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'k0kubun/vim-open-github'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Valloric/MatchTagAlways'
@@ -216,6 +218,15 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<C-a>'],
   \ 'PrtDeleteEnt()':       ['<C-l>'],
   \ }
+""" Telescope
+nnoremap sl <cmd>Telescope find_files<cr>
+lua << EOF
+require('telescope').setup{
+  defaults = {
+    initial_mode = "insert"
+  },
+}
+EOF
 """ FlyGREP
 nnoremap sg :FlyGrep<CR>
 """ Ag
