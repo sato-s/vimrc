@@ -4,6 +4,7 @@
 call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'k0kubun/vim-open-github'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Valloric/MatchTagAlways'
