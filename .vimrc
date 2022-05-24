@@ -190,7 +190,7 @@ augroup END
 let g:ctrlp_map = 'Nop'
 " nnoremap ss :<C-u>CtrlPBuffer<CR>
 nnoremap sa :<C-u>CtrlP<CR>
-nnoremap sl :<C-u>CtrlPMRUFiles<CR>
+" nnoremap sl :<C-u>CtrlPMRUFiles<CR>
 nnoremap srm :<C-u>CtrlPModels<CR>
 nnoremap src :<C-u>CtrlPControllers<CR>
 nnoremap srv :<C-u>CtrlPViews<CR>
@@ -221,6 +221,7 @@ let g:ctrlp_prompt_mappings = {
 nnoremap s<space> <cmd>Telescope find_files<cr>
 nnoremap ss <cmd>Telescope buffers<cr>
 nnoremap sg <cmd>Telescope live_grep<cr>
+nnoremap sl <cmd>Telescope oldfiles<cr>
 lua << EOF
 require('telescope').setup{
   defaults = {
