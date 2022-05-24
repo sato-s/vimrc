@@ -29,7 +29,6 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/tagbar'
 Plug 'rking/ag.vim'
 Plug 'sainnhe/edge'
 Plug 'scrooloose/nerdtree'
@@ -44,7 +43,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/Tagbar'
 Plug 'vimwiki/vimwiki'
-Plug 'wsdjeg/FlyGrep.vim'
 Plug 'hsanson/vim-openapi'
 """ ColorScheme
 Plug 'danilo-augusto/vim-afterglow'
@@ -190,7 +188,7 @@ augroup END
 " endfunction
 """ CtrlP
 let g:ctrlp_map = 'Nop'
-nnoremap ss :<C-u>CtrlPBuffer<CR>
+" nnoremap ss :<C-u>CtrlPBuffer<CR>
 nnoremap sa :<C-u>CtrlP<CR>
 nnoremap sl :<C-u>CtrlPMRUFiles<CR>
 nnoremap srm :<C-u>CtrlPModels<CR>
@@ -220,7 +218,9 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtDeleteEnt()':       ['<C-l>'],
   \ }
 """ Telescope
-nnoremap sl <cmd>Telescope find_files<cr>
+nnoremap s<space> <cmd>Telescope find_files<cr>
+nnoremap ss <cmd>Telescope buffers<cr>
+nnoremap sg <cmd>Telescope live_grep<cr>
 lua << EOF
 require('telescope').setup{
   defaults = {
@@ -228,8 +228,6 @@ require('telescope').setup{
   },
 }
 EOF
-""" FlyGREP
-nnoremap sg :FlyGrep<CR>
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 """ nerd tree
@@ -629,8 +627,8 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 "
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>f  <Plug>(coc-format)
+nmap <leader>f  <Plug>(coc-format)
 "
 augroup mygroup
   autocmd!
@@ -642,8 +640,10 @@ augroup end
 "
 " " Applying codeAction to the selected region.
 " " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>a  <Plug>(coc-codeaction)
+nmap <leader>a  <Plug>(coc-codeaction)
+" xmap <leader>a  <Plug>(coc-codeaction-cursor)
+" nmap <leader>a  <Plug>(coc-codeaction-cursor)
 "
 " " Remap keys for applying codeAction to the current buffer.
 " nmap <leader>ac  <Plug>(coc-codeaction)
