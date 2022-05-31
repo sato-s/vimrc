@@ -189,7 +189,7 @@ augroup END
 """ CtrlP
 let g:ctrlp_map = 'Nop'
 " nnoremap ss :<C-u>CtrlPBuffer<CR>
-nnoremap sa :<C-u>CtrlP<CR>
+" nnoremap sa :<C-u>CtrlP<CR>
 " nnoremap sl :<C-u>CtrlPMRUFiles<CR>
 nnoremap srm :<C-u>CtrlPModels<CR>
 nnoremap src :<C-u>CtrlPControllers<CR>
@@ -218,7 +218,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtDeleteEnt()':       ['<C-l>'],
   \ }
 """ Telescope
-nnoremap s<space> <cmd>Telescope find_files<cr>
+nnoremap sa <cmd>Telescope find_files<cr>
 nnoremap ss <cmd>Telescope buffers<cr>
 nnoremap sg <cmd>Telescope live_grep<cr>
 nnoremap sl <cmd>Telescope oldfiles<cr>
@@ -227,6 +227,20 @@ require('telescope').setup{
   defaults = {
     initial_mode = "insert"
   },
+  pickers = {
+    find_files = {
+      layout_strategy='vertical'
+    },
+    buffers = {
+      layout_strategy='vertical'
+    },
+    live_grep = {
+      layout_strategy='vertical'
+    },
+    oldfiles = {
+      layout_strategy='vertical'
+    },
+  }
 }
 EOF
 """ Ag
