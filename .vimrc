@@ -4,6 +4,7 @@
 call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'sato-s/telescope-rails.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'k0kubun/vim-open-github'
 Plug 'MaxMEllon/vim-jsx-pretty'
@@ -191,10 +192,6 @@ let g:ctrlp_map = 'Nop'
 " nnoremap ss :<C-u>CtrlPBuffer<CR>
 " nnoremap sa :<C-u>CtrlP<CR>
 " nnoremap sl :<C-u>CtrlPMRUFiles<CR>
-nnoremap srm :<C-u>CtrlPModels<CR>
-nnoremap src :<C-u>CtrlPControllers<CR>
-nnoremap srv :<C-u>CtrlPViews<CR>
-nnoremap srs :<C-u>CtrlPSpecs<CR>
 nnoremap sd :<C-u>CtrlPDir<CR>
 nnoremap st :<C-u>CtrlPTag<CR>
 hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -222,6 +219,9 @@ nnoremap sa <cmd>Telescope find_files<cr>
 nnoremap ss <cmd>Telescope buffers<cr>
 nnoremap sg <cmd>Telescope live_grep<cr>
 nnoremap sl <cmd>Telescope oldfiles<cr>
+nnoremap srs :Telescope rails specs<CR>
+nnoremap src :Telescope rails controllers<CR>
+nnoremap srm :Telescope rails models<CR>
 lua << EOF
 require('telescope').setup{
   defaults = {
