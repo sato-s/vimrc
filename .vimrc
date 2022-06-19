@@ -222,6 +222,7 @@ nnoremap sl <cmd>Telescope oldfiles<cr>
 nnoremap srs :Telescope rails specs<CR>
 nnoremap src :Telescope rails controllers<CR>
 nnoremap srm :Telescope rails models<CR>
+nnoremap srv :Telescope rails views<CR>
 lua << EOF
 require('telescope').setup{
   defaults = {
