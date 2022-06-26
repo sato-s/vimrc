@@ -2,6 +2,7 @@
 """ Plug-ins
 """"""""""""""""""""""""""""""
 call plug#begin()
+Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'sato-s/telescope-rails.nvim'
