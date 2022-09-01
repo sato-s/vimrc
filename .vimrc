@@ -289,7 +289,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 """ tagbar
 noremap st :TagbarToggle<CR>
 """ vimwiki
-let g:vimwiki_list = [{'path': '~/workspace/memo','syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/work/memo','syntax': 'markdown', 'ext': '.md'}]
 nnoremap mww :normal <leader>ww<CR>
 nnoremap mwt :normal <leader>wt<CR>
 nnoremap mws :normal <leader>ws<CR>
@@ -557,9 +557,9 @@ endif
 """ Color Scheme
 set termguicolors
 " let ayucolor="light"
-let ayucolor="mirage"
+" let ayucolor="mirage"
 " let ayucolor="dark"
-colorscheme ayu
+colorscheme afterglow
 
 highlight clear CursorLine
 highlight CursorLine gui=underline cterm=underline
