@@ -154,10 +154,10 @@ if executable('solargraph')
     \ })
 endif
 inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
+  \ coc#pum#visible() ? "\<C-n>" :
   \ <SID>check_back_space() ? "\<TAB>" :
   \ asyncomplete#force_refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> coc#pum#visible() ? "\<C-p>" : "\<C-h>"
 
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
