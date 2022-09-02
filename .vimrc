@@ -275,9 +275,9 @@ noremap mgh :GitGutterLineHighlightsToggle<CR>
 noremap mgr :GitGutterAll<CR>
 nnoremap sb :Git blame<CR>
 nnoremap sgd :Gdiff<CR>
-let g:gitgutter_sign_added = '▶'
-let g:gitgutter_sign_modified = '⮂'
-let g:gitgutter_sign_removed = '◀'
+let g:gitgutter_sign_added = '█'
+let g:gitgutter_sign_modified = '█'
+let g:gitgutter_sign_removed = '█'
 """ buffet
 noremap <C-k> :bn<CR>
 noremap <C-j> :bp<CR>
@@ -559,6 +559,8 @@ set termguicolors
 " let ayucolor="light"
 " let ayucolor="mirage"
 " let ayucolor="dark"
+let g:afterglow_inherit_background=1
+let g:afterglow_italic_comments=1
 colorscheme afterglow
 
 highlight clear CursorLine
