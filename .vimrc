@@ -2,9 +2,12 @@
 """ Plug-ins
 """"""""""""""""""""""""""""""
 call plug#begin()
+Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'sato-s/telescope-rails.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'k0kubun/vim-open-github'
@@ -217,6 +220,7 @@ let g:ctrlp_prompt_mappings = {
   \ }
 """ Telescope
 nnoremap sa <cmd>Telescope find_files<cr>
+nnoremap sr <cmd>Telescope registers<cr>
 nnoremap ss <cmd>Telescope buffers<cr>
 nnoremap sg <cmd>Telescope live_grep<cr>
 nnoremap sl <cmd>Telescope oldfiles<cr>
