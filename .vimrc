@@ -353,6 +353,9 @@ endif
 """"""""""""""""""""""""""""""
 """ Shortcuts
 """"""""""""""""""""""""""""""
+" Macro
+noremap mm qq
+noremap mq :'<,'>normal @q<CR>
 " CTRL-C to ESC
 nnoremap <C-c> <esc>
 inoremap <C-c> <esc>
