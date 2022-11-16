@@ -2,9 +2,11 @@
 """ Plug-ins
 """"""""""""""""""""""""""""""
 call plug#begin()
+Plug 'hashivim/vim-terraform'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
@@ -33,7 +35,7 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rking/ag.vim'
 Plug 'sainnhe/edge'
 Plug 'scrooloose/nerdtree'
@@ -246,8 +248,12 @@ require('telescope').setup{
     oldfiles = {
       layout_strategy='vertical'
     },
+    layout_config = {
+      prompt_position = "top"
+    }
   }
 }
+require("registers").setup({})
 EOF
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
