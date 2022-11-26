@@ -275,8 +275,10 @@ nnoremap <silent>    m9 <Cmd>BufferGoto 9<CR>
 nnoremap <silent>    <C-j> <Cmd>BufferPrevious<CR>
 nnoremap <silent>    <C-k> <Cmd>BufferNext<CR>
 
-noremap mb :Bw<CR>
-noremap mB :Bonly<CR>
+nnoremap <silent>    mb <Cmd>BufferClose<CR>
+nnoremap <silent>    mB <Cmd>BufferCloseAllButPinned<CR>
+nnoremap <silent>    mp <Cmd>BufferPin<CR>
+
 
 """ gitgutter
 set updatetime=100
@@ -465,8 +467,6 @@ function! Getclip()
   setlocal nopaste
   let @@ = reg_save
 endfunction
-
-nnoremap <silent> mp :call Getclip()<CR>
 
 """"""""""""""""""""""""""""""
 """ mksession when exit
