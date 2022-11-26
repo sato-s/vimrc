@@ -18,7 +18,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'bagrat/vim-buffet'
+Plug 'romgrk/barbar.nvim'
 Plug 'dag/vim-fish'
 Plug 'danro/rename.vim'
 Plug 'davidhalter/jedi-vim'
@@ -263,17 +263,21 @@ map sn :NERDTreeToggle<CR>
 map sc :NERDTreeFind<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ buffet
-let g:buffet_show_index = 1
-nmap m1 <Plug>BuffetSwitch(1)
-nmap m2 <Plug>BuffetSwitch(2)
-nmap m3 <Plug>BuffetSwitch(3)
-nmap m4 <Plug>BuffetSwitch(4)
-nmap m5 <Plug>BuffetSwitch(5)
-nmap m6 <Plug>BuffetSwitch(6)
-nmap m7 <Plug>BuffetSwitch(7)
-nmap m8 <Plug>BuffetSwitch(8)
-nmap m9 <Plug>BuffetSwitch(9)
-nmap m0 <Plug>BuffetSwitch(10)
+nnoremap <silent>    m1 <Cmd>BufferGoto 1<CR>
+nnoremap <silent>    m2 <Cmd>BufferGoto 2<CR>
+nnoremap <silent>    m3 <Cmd>BufferGoto 3<CR>
+nnoremap <silent>    m4 <Cmd>BufferGoto 4<CR>
+nnoremap <silent>    m5 <Cmd>BufferGoto 5<CR>
+nnoremap <silent>    m6 <Cmd>BufferGoto 6<CR>
+nnoremap <silent>    m7 <Cmd>BufferGoto 7<CR>
+nnoremap <silent>    m8 <Cmd>BufferGoto 8<CR>
+nnoremap <silent>    m9 <Cmd>BufferGoto 9<CR>
+nnoremap <silent>    <C-j> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <C-k> <Cmd>BufferNext<CR>
+
+noremap mb :Bw<CR>
+noremap mB :Bonly<CR>
+
 """ gitgutter
 set updatetime=100
 let g:gitgutter_override_sign_column_highlight = 1
@@ -289,11 +293,6 @@ nnoremap sgd :Gdiff<CR>
 let g:gitgutter_sign_added = '█'
 let g:gitgutter_sign_modified = '█'
 let g:gitgutter_sign_removed = '█'
-""" buffet
-noremap <C-k> :bn<CR>
-noremap <C-j> :bp<CR>
-noremap mb :Bw<CR>
-noremap mB :Bonly<CR>
 """ markdown
 "let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
