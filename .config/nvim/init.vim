@@ -6,6 +6,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'eugen0329/vim-esearch'
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
