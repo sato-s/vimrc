@@ -39,7 +39,7 @@ Plug 'plasticboy/vim-markdown'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rking/ag.vim'
 Plug 'sainnhe/edge'
-Plug 'scrooloose/nerdtree'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
@@ -258,10 +258,11 @@ require("registers").setup({})
 EOF
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
-""" nerd tree
-map sn :NERDTreeToggle<CR>
-map sc :NERDTreeFind<CR>
-let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
+""" File Explorer
+nnoremap sn <cmd>CHADopen<cr>
+"-- map sn :NERDTreeToggle<CR>
+"-- map sc :NERDTreeFind<CR>
+"-- let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ buffer barbar
 nnoremap <silent>    m1 <Cmd>BufferGoto 1<CR>
 nnoremap <silent>    m2 <Cmd>BufferGoto 2<CR>
