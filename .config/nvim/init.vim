@@ -262,7 +262,7 @@ noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 map sn :NERDTreeToggle<CR>
 map sc :NERDTreeFind<CR>
 let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
-""" buffet
+""" buffer barbar
 nnoremap <silent>    m1 <Cmd>BufferGoto 1<CR>
 nnoremap <silent>    m2 <Cmd>BufferGoto 2<CR>
 nnoremap <silent>    m3 <Cmd>BufferGoto 3<CR>
