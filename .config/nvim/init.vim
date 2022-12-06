@@ -263,7 +263,7 @@ nnoremap sn <cmd>CHADopen<cr>
 "-- map sn :NERDTreeToggle<CR>
 "-- map sc :NERDTreeFind<CR>
 "-- let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
-""" buffer barbar
+""" bufferline
 set termguicolors
 lua << EOF
 require("bufferline").setup{}
@@ -277,8 +277,8 @@ nnoremap <silent>    m6 <Cmd>BufferGoto 6<CR>
 nnoremap <silent>    m7 <Cmd>BufferGoto 7<CR>
 nnoremap <silent>    m8 <Cmd>BufferGoto 8<CR>
 nnoremap <silent>    m9 <Cmd>BufferGoto 9<CR>
-nnoremap <silent>    <C-j> <Cmd>BufferLineCycleNext<CR>
-nnoremap <silent>    <C-k> <Cmd>BufferLineCyclePrev<CR>
+nnoremap <silent>    <C-k> <Cmd>BufferLineCycleNext<CR>
+nnoremap <silent>    <C-j> <Cmd>BufferLineCyclePrev<CR>
 
 nnoremap <silent>    mb bd
 nnoremap <silent>    mB <Cmd>BufferCloseAllButPinned<CR>
