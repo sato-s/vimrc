@@ -16,7 +16,9 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'romgrk/barbar.nvim'
+Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
+" Plug 'ryanoasis/vim-devicons' Icons without colours
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'dag/vim-fish'
 Plug 'danro/rename.vim'
 Plug 'davidhalter/jedi-vim'
@@ -262,6 +264,10 @@ nnoremap sn <cmd>CHADopen<cr>
 "-- map sc :NERDTreeFind<CR>
 "-- let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ buffer barbar
+set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
 nnoremap <silent>    m1 <Cmd>BufferGoto 1<CR>
 nnoremap <silent>    m2 <Cmd>BufferGoto 2<CR>
 nnoremap <silent>    m3 <Cmd>BufferGoto 3<CR>
@@ -271,12 +277,12 @@ nnoremap <silent>    m6 <Cmd>BufferGoto 6<CR>
 nnoremap <silent>    m7 <Cmd>BufferGoto 7<CR>
 nnoremap <silent>    m8 <Cmd>BufferGoto 8<CR>
 nnoremap <silent>    m9 <Cmd>BufferGoto 9<CR>
-nnoremap <silent>    <C-j> <Cmd>BufferPrevious<CR>
-nnoremap <silent>    <C-k> <Cmd>BufferNext<CR>
+nnoremap <silent>    <C-j> <Cmd>BufferLineCycleNext<CR>
+nnoremap <silent>    <C-k> <Cmd>BufferLineCyclePrev<CR>
 
-nnoremap <silent>    mb <Cmd>BufferClose<CR>
+nnoremap <silent>    mb bd
 nnoremap <silent>    mB <Cmd>BufferCloseAllButPinned<CR>
-nnoremap <silent>    mp <Cmd>BufferPin<CR>
+nnoremap <silent>    mp <Cmd>BufferLineTogglePin<CR>
 
 
 """ gitgutter
