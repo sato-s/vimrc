@@ -5,14 +5,12 @@ call plug#begin()
 Plug 'hashivim/vim-terraform'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'eugen0329/vim-esearch'
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'sato-s/telescope-rails.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'k0kubun/vim-open-github'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Valloric/MatchTagAlways'
