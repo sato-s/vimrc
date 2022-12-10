@@ -281,7 +281,8 @@ nnoremap <silent>m8 <Cmd>BufferLineGoToBuffer 8<CR>
 nnoremap <silent>m9 <Cmd>BufferLineGoToBuffer 9<CR>
 
 nnoremap <silent>    mb <Cmd>bd<CR>
-nnoremap <silent>    mB <Cmd>BufferCloseAllButPinned<CR>
+nnoremap <silent>    mk <Cmd>BufferLineCloseRight<CR>
+nnoremap <silent>    mu <Cmd>BufferLineCloseLeft<CR>
 nnoremap <silent>    mp <Cmd>BufferLineTogglePin<CR>
 
 
