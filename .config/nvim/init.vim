@@ -268,19 +268,19 @@ set termguicolors
 lua << EOF
 require("bufferline").setup{}
 EOF
-nnoremap <silent>    m1 <Cmd>BufferGoto 1<CR>
-nnoremap <silent>    m2 <Cmd>BufferGoto 2<CR>
-nnoremap <silent>    m3 <Cmd>BufferGoto 3<CR>
-nnoremap <silent>    m4 <Cmd>BufferGoto 4<CR>
-nnoremap <silent>    m5 <Cmd>BufferGoto 5<CR>
-nnoremap <silent>    m6 <Cmd>BufferGoto 6<CR>
-nnoremap <silent>    m7 <Cmd>BufferGoto 7<CR>
-nnoremap <silent>    m8 <Cmd>BufferGoto 8<CR>
-nnoremap <silent>    m9 <Cmd>BufferGoto 9<CR>
 nnoremap <silent>    <C-k> <Cmd>BufferLineCycleNext<CR>
 nnoremap <silent>    <C-j> <Cmd>BufferLineCyclePrev<CR>
+nnoremap <silent>m1 <Cmd>BufferLineGoToBuffer 1<CR>
+nnoremap <silent>m2 <Cmd>BufferLineGoToBuffer 2<CR>
+nnoremap <silent>m3 <Cmd>BufferLineGoToBuffer 3<CR>
+nnoremap <silent>m4 <Cmd>BufferLineGoToBuffer 4<CR>
+nnoremap <silent>m5 <Cmd>BufferLineGoToBuffer 5<CR>
+nnoremap <silent>m6 <Cmd>BufferLineGoToBuffer 6<CR>
+nnoremap <silent>m7 <Cmd>BufferLineGoToBuffer 7<CR>
+nnoremap <silent>m8 <Cmd>BufferLineGoToBuffer 8<CR>
+nnoremap <silent>m9 <Cmd>BufferLineGoToBuffer 9<CR>
 
-nnoremap <silent>    mb bd
+nnoremap <silent>    mb <Cmd>bd<CR>
 nnoremap <silent>    mB <Cmd>BufferCloseAllButPinned<CR>
 nnoremap <silent>    mp <Cmd>BufferLineTogglePin<CR>
 
