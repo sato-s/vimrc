@@ -157,11 +157,6 @@ if executable('solargraph')
     \ 'whitelist': ['ruby'],
     \ })
 endif
-inoremap <silent><expr> <TAB>
-  \ coc#pum#visible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ asyncomplete#force_refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? "\<C-p>" : "\<C-h>"
 
 augroup lsp_install
   au!
