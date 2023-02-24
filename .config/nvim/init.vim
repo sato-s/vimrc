@@ -24,8 +24,6 @@ Plug 'danro/rename.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
-Plug 'iurifq/ctrlp-rails.vim'
-Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mechatroner/rainbow_csv'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -192,35 +190,6 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
-  " refer to doc to add more commands
-" endfunction
-""" CtrlP
-let g:ctrlp_map = 'Nop'
-" nnoremap ss :<C-u>CtrlPBuffer<CR>
-" nnoremap sa :<C-u>CtrlP<CR>
-" nnoremap sl :<C-u>CtrlPMRUFiles<CR>
-nnoremap sd :<C-u>CtrlPDir<CR>
-nnoremap st :<C-u>CtrlPTag<CR>
-hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
-
-function BrightHighlightOn()
-  hi CursorLine guibg=darkred
-endfunction
-
-function BrightHighlightOff()
-  hi CursorLine guibg=#191919
-endfunction
-let g:ctrlp_working_path_mode = '0'
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_extensions = ['tag']
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
-let g:ctrlp_by_filename = 1
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtClearCache()':      ['<C-a>'],
-  \ 'PrtDeleteEnt()':       ['<C-l>'],
-  \ }
 """ Telescope
 nnoremap sa <cmd>Telescope find_files<cr>
 nnoremap sr <cmd>Telescope registers<cr>
