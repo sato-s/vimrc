@@ -2,6 +2,7 @@
 """ Plug-ins
 """"""""""""""""""""""""""""""
 call plug#begin()
+Plug 'github/copilot.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
