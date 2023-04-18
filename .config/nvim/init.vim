@@ -346,6 +346,8 @@ noremap md :cd %:p:h<CR>
 noremap s <Nop>
 map Y y$
 vnoremap * "zy:let @/ = @z<CR>n
+""" Commands
+command FN let @+ = expand("%")
 """ Encoding
 noremap mes :e ++enc=shift_jis<CR>
 noremap meu :e ++enc=utf-8<CR>
