@@ -9,6 +9,7 @@
   d = diff
   dc = diff --cached
   b = branch
+  c = commit
 [color]
   diff = auto
   status = auto
