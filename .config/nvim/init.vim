@@ -367,6 +367,13 @@ noremap md :cd %:p:h<CR>
 noremap s <Nop>
 map Y y$
 vnoremap * "zy:let @/ = @z<CR>n
+" a to 2i
+xnoremap a" 2i"
+xnoremap a' 2i'
+xnoremap a` 2i`
+onoremap a" 2i"
+onoremap a' 2i'
+onoremap a` 2i`
 """ Commands
 command FN let @+ = expand("%")
 command FA let @+ = expand('%:p')
