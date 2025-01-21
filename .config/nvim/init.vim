@@ -7,6 +7,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'eugen0329/vim-esearch'
+Plug 'google/vim-jsonnet'
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
