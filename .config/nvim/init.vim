@@ -19,6 +19,7 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'ruanyl/vim-gh-line'
 " Plug 'ryanoasis/vim-devicons' Icons without colours
 Plug 'akinsho/bufferline.nvim'
 Plug 'dag/vim-fish'
@@ -277,6 +278,9 @@ nnoremap mww :normal <leader>ww<CR>
 nnoremap mwt :normal <leader>wt<CR>
 nnoremap mws :normal <leader>ws<CR>
 nnoremap mwr :normal <leader>wr<CR>
+""" gh-line
+" Copy link to a clipboard instead of opening a browser
+"let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 """ indent-guide
 nmap mti <leader>ig
 """ haskell-vim
