@@ -8,6 +8,7 @@ Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'eugen0329/vim-esearch'
 Plug 'google/vim-jsonnet'
+Plug 'danilamihailov/beacon.nvim'
 Plug 'tsandall/vim-rego'
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
@@ -152,6 +153,10 @@ noremap <C-u> 5k
 """"""""""""""""""""""""""""""
 """ pluginn
 """"""""""""""""""""""""""""""
+""" Beacon
+lua << EOS
+require'beacon'.setup()
+EOS
 """ solargraph
 if executable('solargraph')
   " gem install solargraph
