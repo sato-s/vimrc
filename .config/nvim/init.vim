@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""""
 call plug#begin()
 Plug 'github/copilot.vim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'hashivim/vim-terraform'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -22,13 +23,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'ruanyl/vim-gh-line'
+Plug 'tsandall/vim-rego'
 " Plug 'ryanoasis/vim-devicons' Icons without colours
 Plug 'akinsho/bufferline.nvim'
 Plug 'dag/vim-fish'
 Plug 'danro/rename.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'mechatroner/rainbow_csv'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -157,6 +159,10 @@ noremap <C-u> 5k
 lua << EOS
 require'beacon'.setup()
 EOS
+""" lsp
+lua << EOF
+require'lspconfig'.regal.setup{}
+EOF
 """ solargraph
 if executable('solargraph')
   " gem install solargraph
@@ -280,10 +286,12 @@ let g:vim_markdown_conceal_code_blocks = 0
 noremap st :TagbarToggle<CR>
 """ vimwiki
 let g:vimwiki_list = [{'path': '~/work/memo','syntax': 'markdown', 'ext': '.md'}]
-nnoremap mww :normal <leader>ww<CR>
-nnoremap mwt :normal <leader>wt<CR>
-nnoremap mws :normal <leader>ws<CR>
-nnoremap mwr :normal <leader>wr<CR>
+let g:vimwiki_key_mappings = { 'all_maps': 0, }
+nnoremap mwf <Plug>VimwikiFollowLink
+nnoremap mww <Plug>VimwikiIndex
+" nnoremap mwt :normal <leader>wt<CR>
+" nnoremap mws :normal <leader>ws<CR>
+" nnoremap mwr :normal <leader>wr<CR>
 """ gh-line
 " Copy link to a clipboard instead of opening a browser
 "let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
