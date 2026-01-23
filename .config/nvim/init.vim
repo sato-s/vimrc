@@ -10,7 +10,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'eugen0329/vim-esearch'
 Plug 'google/vim-jsonnet'
 Plug 'danilamihailov/beacon.nvim'
-Plug 'tsandall/vim-rego'
+Plug 'ahalbert/vim-gbq-syntax'
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -30,7 +30,7 @@ Plug 'dag/vim-fish'
 Plug 'danro/rename.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'elixir-editors/vim-elixir'
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'leafgarland/typescript-vim'
 Plug 'mechatroner/rainbow_csv'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -44,7 +44,8 @@ Plug 'plasticboy/vim-markdown'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rking/ag.vim'
 Plug 'sainnhe/edge'
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'preservim/nerdtree'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
@@ -237,10 +238,10 @@ EOF
 """ Ag
 noremap sf :Ag <C-R>=expand("<cword>")<CR><CR>
 """ File Explorer
-nnoremap sn <cmd>CHADopen<cr>
-"-- map sn :NERDTreeToggle<CR>
-"-- map sc :NERDTreeFind<CR>
-"-- let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
+" nnoremap sn <cmd>CHADopen<cr>
+map sn :NERDTreeToggle<CR>
+map sc :NERDTreeFind<CR>
+let g:NERDTreeMapJumpNextSibling = '' " Ctrl j/k conflict with nerdtree. so disable them
 """ bufferline
 set termguicolors
 lua << EOF
