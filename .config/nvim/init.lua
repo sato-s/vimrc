@@ -1,76 +1,62 @@
 ------------------------------
 -- Packages (using vim.pack)
 ------------------------------
-local pack = vim.pack
-
--- Helper function to run post-install commands
-local function post_install(pkg_name, command)
-  vim.api.nvim_create_autocmd('User', {
-    pattern = 'PackAdded',
-    callback = function(args)
-      if args.data and args.data.name == pkg_name then
-        vim.cmd(command)
-      end
-    end,
-    once = true,
-  })
-end
-
--- Add packages
-pack.add('github/copilot.vim')
-pack.add('hashivim/vim-terraform')
-pack.add('tversteeg/registers.nvim')
-pack.add('nvim-treesitter/nvim-treesitter')
-pack.add('eugen0329/vim-esearch')
-pack.add('google/vim-jsonnet')
-pack.add('danilamihailov/beacon.nvim')
-pack.add('ahalbert/vim-gbq-syntax')
-pack.add('nvim-lua/plenary.nvim')
-pack.add('nvim-telescope/telescope.nvim')
-pack.add('nvim-telescope/telescope-symbols.nvim')
-pack.add('sato-s/telescope-rails.nvim')
-pack.add('k0kubun/vim-open-github')
-pack.add('MaxMEllon/vim-jsx-pretty')
-pack.add('Valloric/MatchTagAlways')
-pack.add('airblade/vim-gitgutter')
-pack.add('ap/vim-css-color')
-pack.add('nvim-tree/nvim-web-devicons')
-pack.add('ruanyl/vim-gh-line')
-pack.add('tsandall/vim-rego')
-pack.add('akinsho/bufferline.nvim')
-pack.add('dag/vim-fish')
-pack.add('danro/rename.vim')
-pack.add('davidhalter/jedi-vim')
-pack.add('elixir-editors/vim-elixir')
-pack.add('fatih/vim-go')
-pack.add('leafgarland/typescript-vim')
-pack.add('mechatroner/rainbow_csv')
-pack.add('nathanaelkane/vim-indent-guides')
-pack.add('neovimhaskell/haskell-vim')
-pack.add('ntpeters/vim-better-whitespace')
-pack.add('pangloss/vim-javascript')
-pack.add('plasticboy/vim-markdown')
-pack.add('neoclide/coc.nvim')
-pack.add('rking/ag.vim')
-pack.add('sainnhe/edge')
-pack.add('preservim/nerdtree')
-pack.add('tmux-plugins/vim-tmux-focus-events')
-pack.add('tomtom/tcomment_vim')
-pack.add('tpope/vim-abolish')
-pack.add('tpope/vim-bundler')
-pack.add('tpope/vim-fugitive')
-pack.add('tpope/vim-rails')
-pack.add('tpope/vim-rbenv')
-pack.add('tpope/vim-surround')
-pack.add('vim-ruby/vim-ruby')
-pack.add('vim-scripts/Tagbar')
-pack.add('vimwiki/vimwiki')
-pack.add('hsanson/vim-openapi')
--- ColorScheme
-pack.add('danilo-augusto/vim-afterglow')
-pack.add('sickill/vim-monokai')
-pack.add('sato-s/summerfruit256.vim')
-pack.add('ayu-theme/ayu-vim')
+vim.pack.add({
+  'https://github.com/github/copilot.vim',
+  'https://github.com/hashivim/vim-terraform',
+  'https://github.com/tversteeg/registers.nvim',
+  'https://github.com/nvim-treesitter/nvim-treesitter',
+  'https://github.com/eugen0329/vim-esearch',
+  'https://github.com/google/vim-jsonnet',
+  'https://github.com/danilamihailov/beacon.nvim',
+  'https://github.com/ahalbert/vim-gbq-syntax',
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/nvim-telescope/telescope.nvim',
+  'https://github.com/nvim-telescope/telescope-symbols.nvim',
+  'https://github.com/sato-s/telescope-rails.nvim',
+  'https://github.com/k0kubun/vim-open-github',
+  'https://github.com/MaxMEllon/vim-jsx-pretty',
+  'https://github.com/Valloric/MatchTagAlways',
+  'https://github.com/airblade/vim-gitgutter',
+  'https://github.com/ap/vim-css-color',
+  'https://github.com/nvim-tree/nvim-web-devicons',
+  'https://github.com/ruanyl/vim-gh-line',
+  'https://github.com/tsandall/vim-rego',
+  'https://github.com/akinsho/bufferline.nvim',
+  'https://github.com/dag/vim-fish',
+  'https://github.com/danro/rename.vim',
+  'https://github.com/davidhalter/jedi-vim',
+  'https://github.com/elixir-editors/vim-elixir',
+  'https://github.com/fatih/vim-go',
+  'https://github.com/leafgarland/typescript-vim',
+  'https://github.com/mechatroner/rainbow_csv',
+  'https://github.com/nathanaelkane/vim-indent-guides',
+  'https://github.com/neovimhaskell/haskell-vim',
+  'https://github.com/ntpeters/vim-better-whitespace',
+  'https://github.com/pangloss/vim-javascript',
+  'https://github.com/plasticboy/vim-markdown',
+  'https://github.com/neoclide/coc.nvim',
+  'https://github.com/rking/ag.vim',
+  'https://github.com/sainnhe/edge',
+  'https://github.com/preservim/nerdtree',
+  'https://github.com/tmux-plugins/vim-tmux-focus-events',
+  'https://github.com/tomtom/tcomment_vim',
+  'https://github.com/tpope/vim-abolish',
+  'https://github.com/tpope/vim-bundler',
+  'https://github.com/tpope/vim-fugitive',
+  'https://github.com/tpope/vim-rails',
+  'https://github.com/tpope/vim-rbenv',
+  'https://github.com/tpope/vim-surround',
+  'https://github.com/vim-ruby/vim-ruby',
+  'https://github.com/vim-scripts/Tagbar',
+  'https://github.com/vimwiki/vimwiki',
+  'https://github.com/hsanson/vim-openapi',
+  -- ColorScheme
+  'https://github.com/danilo-augusto/vim-afterglow',
+  'https://github.com/sickill/vim-monokai',
+  'https://github.com/sato-s/summerfruit256.vim',
+  'https://github.com/ayu-theme/ayu-vim',
+})
 
 -- Post-install hooks
 -- Treesitter update
