@@ -1,67 +1,89 @@
 ------------------------------
--- Plug-ins
+-- Packages (using vim.pack)
 ------------------------------
-local vim = vim
-local Plug = vim.fn['plug#']
+local pack = vim.pack
 
-vim.call('plug#begin')
+-- Helper function to run post-install commands
+local function post_install(pkg_name, command)
+  vim.api.nvim_create_autocmd('User', {
+    pattern = 'PackAdded',
+    callback = function(args)
+      if args.data and args.data.name == pkg_name then
+        vim.cmd(command)
+      end
+    end,
+    once = true,
+  })
+end
 
-Plug('github/copilot.vim')
-Plug('hashivim/vim-terraform')
-Plug('tversteeg/registers.nvim', { branch = 'main' })
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
-Plug('eugen0329/vim-esearch')
-Plug('google/vim-jsonnet')
-Plug('danilamihailov/beacon.nvim')
-Plug('ahalbert/vim-gbq-syntax')
-Plug('nvim-lua/plenary.nvim')
-Plug('nvim-telescope/telescope.nvim')
-Plug('nvim-telescope/telescope-symbols.nvim')
-Plug('sato-s/telescope-rails.nvim')
-Plug('k0kubun/vim-open-github')
-Plug('MaxMEllon/vim-jsx-pretty')
-Plug('Valloric/MatchTagAlways')
-Plug('airblade/vim-gitgutter')
-Plug('ap/vim-css-color')
-Plug('nvim-tree/nvim-web-devicons')
-Plug('ruanyl/vim-gh-line')
-Plug('tsandall/vim-rego')
-Plug('akinsho/bufferline.nvim')
-Plug('dag/vim-fish')
-Plug('danro/rename.vim')
-Plug('davidhalter/jedi-vim')
-Plug('elixir-editors/vim-elixir')
-Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries' })
-Plug('leafgarland/typescript-vim')
-Plug('mechatroner/rainbow_csv')
-Plug('nathanaelkane/vim-indent-guides')
-Plug('neovimhaskell/haskell-vim')
-Plug('ntpeters/vim-better-whitespace')
-Plug('pangloss/vim-javascript')
-Plug('plasticboy/vim-markdown')
-Plug('neoclide/coc.nvim', { branch = 'release' })
-Plug('rking/ag.vim')
-Plug('sainnhe/edge')
-Plug('preservim/nerdtree')
-Plug('tmux-plugins/vim-tmux-focus-events')
-Plug('tomtom/tcomment_vim')
-Plug('tpope/vim-abolish')
-Plug('tpope/vim-bundler')
-Plug('tpope/vim-fugitive')
-Plug('tpope/vim-rails')
-Plug('tpope/vim-rbenv')
-Plug('tpope/vim-surround')
-Plug('vim-ruby/vim-ruby')
-Plug('vim-scripts/Tagbar')
-Plug('vimwiki/vimwiki')
-Plug('hsanson/vim-openapi')
+-- Add packages
+pack.add('github/copilot.vim')
+pack.add('hashivim/vim-terraform')
+pack.add('tversteeg/registers.nvim')
+pack.add('nvim-treesitter/nvim-treesitter')
+pack.add('eugen0329/vim-esearch')
+pack.add('google/vim-jsonnet')
+pack.add('danilamihailov/beacon.nvim')
+pack.add('ahalbert/vim-gbq-syntax')
+pack.add('nvim-lua/plenary.nvim')
+pack.add('nvim-telescope/telescope.nvim')
+pack.add('nvim-telescope/telescope-symbols.nvim')
+pack.add('sato-s/telescope-rails.nvim')
+pack.add('k0kubun/vim-open-github')
+pack.add('MaxMEllon/vim-jsx-pretty')
+pack.add('Valloric/MatchTagAlways')
+pack.add('airblade/vim-gitgutter')
+pack.add('ap/vim-css-color')
+pack.add('nvim-tree/nvim-web-devicons')
+pack.add('ruanyl/vim-gh-line')
+pack.add('tsandall/vim-rego')
+pack.add('akinsho/bufferline.nvim')
+pack.add('dag/vim-fish')
+pack.add('danro/rename.vim')
+pack.add('davidhalter/jedi-vim')
+pack.add('elixir-editors/vim-elixir')
+pack.add('fatih/vim-go')
+pack.add('leafgarland/typescript-vim')
+pack.add('mechatroner/rainbow_csv')
+pack.add('nathanaelkane/vim-indent-guides')
+pack.add('neovimhaskell/haskell-vim')
+pack.add('ntpeters/vim-better-whitespace')
+pack.add('pangloss/vim-javascript')
+pack.add('plasticboy/vim-markdown')
+pack.add('neoclide/coc.nvim')
+pack.add('rking/ag.vim')
+pack.add('sainnhe/edge')
+pack.add('preservim/nerdtree')
+pack.add('tmux-plugins/vim-tmux-focus-events')
+pack.add('tomtom/tcomment_vim')
+pack.add('tpope/vim-abolish')
+pack.add('tpope/vim-bundler')
+pack.add('tpope/vim-fugitive')
+pack.add('tpope/vim-rails')
+pack.add('tpope/vim-rbenv')
+pack.add('tpope/vim-surround')
+pack.add('vim-ruby/vim-ruby')
+pack.add('vim-scripts/Tagbar')
+pack.add('vimwiki/vimwiki')
+pack.add('hsanson/vim-openapi')
 -- ColorScheme
-Plug('danilo-augusto/vim-afterglow')
-Plug('sickill/vim-monokai')
-Plug('sato-s/summerfruit256.vim')
-Plug('ayu-theme/ayu-vim')
+pack.add('danilo-augusto/vim-afterglow')
+pack.add('sickill/vim-monokai')
+pack.add('sato-s/summerfruit256.vim')
+pack.add('ayu-theme/ayu-vim')
 
-vim.call('plug#end')
+-- Post-install hooks
+-- Treesitter update
+vim.api.nvim_create_autocmd('VimEnter', {
+  once = true,
+  callback = function()
+    local ts_update = vim.fn.stdpath('data') .. '/pack/packages/start/nvim-treesitter/.ts_updated'
+    if vim.fn.filereadable(ts_update) == 0 then
+      vim.cmd('TSUpdate')
+      vim.fn.writefile({}, ts_update)
+    end
+  end,
+})
 
 ------------------------------
 -- Core setting
